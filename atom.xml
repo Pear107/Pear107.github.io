@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Pear107&#39;s Blog</title>
+  <icon>http://yearr107.top/icon.png</icon>
+  
+  <link href="http://yearr107.top/atom.xml" rel="self"/>
+  
+  <link href="http://yearr107.top/"/>
+  <updated>2023-02-08T00:25:21.757Z</updated>
+  <id>http://yearr107.top/</id>
+  
+  <author>
+    <name>Fan Li</name>
+    <email>1626104789@qq.com</email>
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>墙与门</title>
+    <link href="http://yearr107.top/2023/02/08/%E5%A2%99%E4%B8%8E%E9%97%A8/"/>
+    <id>http://yearr107.top/2023/02/08/%E5%A2%99%E4%B8%8E%E9%97%A8/</id>
+    <published>2023-02-08T00:23:28.000Z</published>
+    <updated>2023-02-08T00:25:21.757Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;你被给定一个 m × n 的二维网格 rooms ，网格中有以下三种可能的初始化值：&lt;/p&gt;
+&lt;p&gt;-1</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>滑动窗口最大值</title>
+    <link href="http://yearr107.top/2023/02/08/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC/"/>
+    <id>http://yearr107.top/2023/02/08/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC/</id>
+    <published>2023-02-08T00:21:12.000Z</published>
+    <updated>2023-02-08T00:24:30.666Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;给你一个整数数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>安排会议日程</title>
+    <link href="http://yearr107.top/2023/02/08/%E5%AE%89%E6%8E%92%E4%BC%9A%E8%AE%AE%E6%97%A5%E7%A8%8B/"/>
+    <id>http://yearr107.top/2023/02/08/%E5%AE%89%E6%8E%92%E4%BC%9A%E8%AE%AE%E6%97%A5%E7%A8%8B/</id>
+    <published>2023-02-08T00:19:19.000Z</published>
+    <updated>2023-02-08T00:20:25.719Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;给定两个人的空闲时间表：slots1 和 slots2，以及会议的预计持续时间 duration，请你为他们安排</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>排序算法</title>
+    <link href="http://yearr107.top/2023/02/08/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    <id>http://yearr107.top/2023/02/08/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</id>
+    <published>2023-02-08T00:17:49.000Z</published>
+    <updated>2023-02-08T00:18:27.666Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;冒泡排序&quot;&gt;&lt;a href=&quot;#冒泡排序&quot; class=&quot;headerlink&quot; title=&quot;冒泡排序&quot;&gt;&lt;/a&gt;冒泡排序&lt;/h2&gt;&lt;figure class=&quot;highlight ts&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>PV 操作</title>
+    <link href="http://yearr107.top/2023/02/08/PV-%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yearr107.top/2023/02/08/PV-%E6%93%8D%E4%BD%9C/</id>
+    <published>2023-02-08T00:15:49.000Z</published>
+    <updated>2023-02-08T00:16:59.451Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>defineProperty 实践</title>
+    <link href="http://yearr107.top/2023/02/08/defineProperty-%E5%AE%9E%E8%B7%B5/"/>
+    <id>http://yearr107.top/2023/02/08/defineProperty-%E5%AE%9E%E8%B7%B5/</id>
+    <published>2023-02-08T00:02:41.000Z</published>
+    <updated>2023-02-08T00:11:32.387Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h2&gt;&lt;figure class=&quot;highlight ts&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript 闭包</title>
+    <link href="http://yearr107.top/2023/02/07/JavaScript-%E9%97%AD%E5%8C%85/"/>
+    <id>http://yearr107.top/2023/02/07/JavaScript-%E9%97%AD%E5%8C%85/</id>
+    <published>2023-02-07T11:46:44.000Z</published>
+    <updated>2023-02-08T00:12:30.062Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;闭包使用&quot;&gt;&lt;a href=&quot;#闭包使用&quot; class=&quot;headerlink&quot; title=&quot;闭包使用&quot;&gt;&lt;/a&gt;闭包使用&lt;/h2&gt;&lt;h3 id=&quot;错误示范&quot;&gt;&lt;a href=&quot;#错误示范&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="前端" scheme="http://yearr107.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PromiseAll 实现</title>
+    <link href="http://yearr107.top/2023/02/07/PromiseAll-%E5%AE%9E%E7%8E%B0/"/>
+    <id>http://yearr107.top/2023/02/07/PromiseAll-%E5%AE%9E%E7%8E%B0/</id>
+    <published>2023-02-07T11:43:35.000Z</published>
+    <updated>2023-02-07T11:47:19.598Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight ts&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="前端" scheme="http://yearr107.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>bind、call 和 apply</title>
+    <link href="http://yearr107.top/2023/02/07/bind%E3%80%81call-%E5%92%8C-apply/"/>
+    <id>http://yearr107.top/2023/02/07/bind%E3%80%81call-%E5%92%8C-apply/</id>
+    <published>2023-02-07T11:39:09.000Z</published>
+    <updated>2023-02-08T00:06:53.492Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h2&gt;&lt;p&gt;&lt;code&gt;call&lt;/code&gt;、&lt;code&gt;apply&lt;/code&gt; 和 &lt;code&gt;bind&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="前端" scheme="http://yearr107.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yearr107.top/2023/02/07/hello-world/"/>
+    <id>http://yearr107.top/2023/02/07/hello-world/</id>
+    <published>2023-02-07T06:18:47.807Z</published>
+    <updated>2023-02-07T00:46:39.512Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
