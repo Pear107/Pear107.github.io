@@ -759,4 +759,27 @@
         <tag>算法</tag>
       </tags>
   </entry>
+  <entry>
+    <title>创建服务器 git 仓库</title>
+    <url>/2023/02/19/%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8-git-%E4%BB%93%E5%BA%93/</url>
+    <content><![CDATA[<h2 id="创建-git-用户并配置ssh-key"><a href="#创建-git-用户并配置ssh-key" class="headerlink" title="创建 git 用户并配置ssh key"></a>创建 git 用户并配置ssh key</h2><p>创建一个 <code>git</code> 用户，并在家目录下建立一个 <code>.ssh</code> 目录，赋予其700权限。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo adduser -m git</span><br><span class="line">su git</span><br><span class="line"><span class="built_in">mkdir</span> ~/.ssh &amp;&amp; <span class="built_in">chmod</span> 700 ~/.ssh</span><br><span class="line"><span class="built_in">touch</span> ~/.ssh/authorized_keys &amp;&amp; <span class="built_in">chmod</span> 600 ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+
+<p>然后只需要将 <code>ssh</code> 连接的公钥复制到 <code>authorized_keys</code> 文件中就可以通过 <code>ssh</code> 连接 <code>git</code> 用户了</p>
+<h2 id="限制git用户的shell"><a href="#限制git用户的shell" class="headerlink" title="限制git用户的shell"></a>限制git用户的shell</h2><p>上面创建的git用户可以通过ssh连接，进行任何操作。为了安全性，我们需要将git用户的活动限制在与Git相关的范围，也就是把git用户的shell改成 <code>git-shell</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo chsh git -s $(<span class="built_in">which</span> git-shell)</span><br></pre></td></tr></table></figure>
+
+<p>当然通过修改<code>/etc/profile</code>也可以达成这一目的。</p>
+<h2 id="创建-blog-对应的-git-仓库"><a href="#创建-blog-对应的-git-仓库" class="headerlink" title="创建 blog 对应的 git 仓库"></a>创建 blog 对应的 git 仓库</h2><p>在 <code>/www/wwwroot</code>下，创建一个空的<code>.git</code>仓库</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git --bare init --shared</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config -e</span><br></pre></td></tr></table></figure>
+
+<p>在 receive 下添加 <code>denyCurrentBranch = ignore</code>，保证仓库能更新</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">[receive]</span><br><span class="line">        denyNonFastforwards = true</span><br><span class="line">        denyCurrentBranch = ignore</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
 </search>
