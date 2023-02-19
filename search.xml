@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>OpenCV 编译（包含 Contrib 模块）</title>
-    <url>/2023/02/18/OpenCV-%E7%BC%96%E8%AF%91%EF%BC%88%E5%8C%85%E5%90%AB-Contrib-%E6%A8%A1%E5%9D%97%EF%BC%89/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>OpenCV</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JavaScript 闭包</title>
     <url>/2023/02/07/JavaScript-%E9%97%AD%E5%8C%85/</url>
     <content><![CDATA[<h2 id="闭包使用"><a href="#闭包使用" class="headerlink" title="闭包使用"></a>闭包使用</h2><h3 id="错误示范"><a href="#错误示范" class="headerlink" title="错误示范"></a>错误示范</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">father</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> t = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">son</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    t = t + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> t;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">son</span>();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> m = <span class="title function_">father</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(m);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(m);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(m);</span><br></pre></td></tr></table></figure>
@@ -30,6 +22,14 @@
 ]]></content>
       <tags>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>OpenCV 编译（包含 Contrib 模块）</title>
+    <url>/2023/02/18/OpenCV-%E7%BC%96%E8%AF%91%EF%BC%88%E5%8C%85%E5%90%AB-Contrib-%E6%A8%A1%E5%9D%97%EF%BC%89/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>OpenCV</tag>
       </tags>
   </entry>
   <entry>
@@ -206,6 +206,14 @@
 ]]></content>
   </entry>
   <entry>
+    <title>rust 变量绑定与解构</title>
+    <url>/2023/02/09/rust-%E5%8F%98%E9%87%8F%E7%BB%91%E5%AE%9A%E4%B8%8E%E8%A7%A3%E6%9E%84/</url>
+    <content><![CDATA[<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="comment">// 变量不可变可以避免运行时检查从而提高性能，但是有时需要给变量重新赋值时，</span></span><br><span class="line">    <span class="comment">// 针对不可变的变量需要重新构造一个新的重名对象，而构造重名对象的过程时丧失了性能。</span></span><br><span class="line">    <span class="comment">// 一般情况下建议使用不可变变量，如果需要使用大量的临时变量则使用 mut</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;!&quot;</span>, a);</span><br><span class="line">    <span class="comment">// 要想使用可以修改的变量，在变量前加 mut</span></span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">b</span> = <span class="number">3</span>;</span><br><span class="line">    <span class="comment">// 只能修改值，不能修改类型</span></span><br><span class="line">    <span class="comment">// b = &quot;b&quot;;</span></span><br><span class="line">    b = <span class="number">4</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;:&#123;1&#125;&quot;</span>, a, b);</span><br><span class="line">    <span class="comment">// 如果一个变量没有被使用 rust 会警告，如果一个变量不会被使用，应该在签名加下划线</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">_y</span> = a;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">_x</span> = b;</span><br><span class="line">    <span class="comment">// rust 解构</span></span><br><span class="line">    <span class="keyword">let</span> (_c, <span class="keyword">mut</span> _d): (<span class="type">bool</span>, <span class="type">bool</span>) = (<span class="literal">true</span>, <span class="literal">true</span>);</span><br><span class="line">    <span class="comment">// 常量不能加 mut，并且必须注明类型。并且最好大写</span></span><br><span class="line">    <span class="keyword">const</span> _E: &amp;<span class="type">str</span> = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">    <span class="comment">// 变量遮蔽</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">a</span> = <span class="string">&quot;hello a&quot;</span>;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, a);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, a);</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">0x1A</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">0o1234567</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">0b10001111</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">123_321</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, a);</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">3.2</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">c</span>: <span class="type">f32</span> = a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Struct</span> &#123;</span><br><span class="line">    e: <span class="type">i32</span>,</span><br><span class="line">    f: <span class="type">i32</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> (a, b, c, d, e);</span><br><span class="line">    (a, b) = (<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">    [c, .., d, _] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">    Struct &#123; e, .. &#125; = Struct &#123; e: <span class="number">5</span>, f: <span class="number">6</span> &#125;;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, a);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, b);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, c);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, d);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
     <title>hexo 指令</title>
     <url>/2023/02/18/hexo-%E6%8C%87%E4%BB%A4/</url>
     <content><![CDATA[<h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo init [folder]</span><br></pre></td></tr></table></figure>
@@ -375,11 +383,24 @@
 ]]></content>
   </entry>
   <entry>
-    <title>rust 变量绑定与解构</title>
-    <url>/2023/02/09/rust-%E5%8F%98%E9%87%8F%E7%BB%91%E5%AE%9A%E4%B8%8E%E8%A7%A3%E6%9E%84/</url>
-    <content><![CDATA[<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="comment">// 变量不可变可以避免运行时检查从而提高性能，但是有时需要给变量重新赋值时，</span></span><br><span class="line">    <span class="comment">// 针对不可变的变量需要重新构造一个新的重名对象，而构造重名对象的过程时丧失了性能。</span></span><br><span class="line">    <span class="comment">// 一般情况下建议使用不可变变量，如果需要使用大量的临时变量则使用 mut</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;!&quot;</span>, a);</span><br><span class="line">    <span class="comment">// 要想使用可以修改的变量，在变量前加 mut</span></span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">b</span> = <span class="number">3</span>;</span><br><span class="line">    <span class="comment">// 只能修改值，不能修改类型</span></span><br><span class="line">    <span class="comment">// b = &quot;b&quot;;</span></span><br><span class="line">    b = <span class="number">4</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;:&#123;1&#125;&quot;</span>, a, b);</span><br><span class="line">    <span class="comment">// 如果一个变量没有被使用 rust 会警告，如果一个变量不会被使用，应该在签名加下划线</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">_y</span> = a;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">_x</span> = b;</span><br><span class="line">    <span class="comment">// rust 解构</span></span><br><span class="line">    <span class="keyword">let</span> (_c, <span class="keyword">mut</span> _d): (<span class="type">bool</span>, <span class="type">bool</span>) = (<span class="literal">true</span>, <span class="literal">true</span>);</span><br><span class="line">    <span class="comment">// 常量不能加 mut，并且必须注明类型。并且最好大写</span></span><br><span class="line">    <span class="keyword">const</span> _E: &amp;<span class="type">str</span> = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">    <span class="comment">// 变量遮蔽</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">a</span> = <span class="string">&quot;hello a&quot;</span>;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, a);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, a);</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">0x1A</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">0o1234567</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">0b10001111</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">123_321</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, a);</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">3.2</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">c</span>: <span class="type">f32</span> = a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>rust 安装</title>
+    <url>/2023/02/09/rust-%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><h6 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl https://sh.rustup.rs -sSf | sh</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Struct</span> &#123;</span><br><span class="line">    e: <span class="type">i32</span>,</span><br><span class="line">    f: <span class="type">i32</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> (a, b, c, d, e);</span><br><span class="line">    (a, b) = (<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">    [c, .., d, _] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">    Struct &#123; e, .. &#125; = Struct &#123; e: <span class="number">5</span>, f: <span class="number">6</span> &#125;;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, a);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, b);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, c);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, d);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h6><p>使用 rustup 安装，一次输入或选择以下选项，第二个选择 MSVC 可能会出问题</p>
+<ul>
+<li>Customize installation</li>
+<li>x86_64-pc-windows-gnu</li>
+<li>stable</li>
+<li>default</li>
+<li>yes</li>
+<li>Proceed with installation</li>
+</ul>
+<h4 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ rustup self uninstall</span><br></pre></td></tr></table></figure>
+
+<h4 id="版本查看"><a href="#版本查看" class="headerlink" title="版本查看"></a>版本查看</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ rustc -V</span><br><span class="line">rustc 1.56.1 (59eed8a2a 2021-11-01)</span><br><span class="line"></span><br><span class="line">$ cargo -V</span><br><span class="line">cargo 1.57.0 (b2e52d7ca 2021-10-21)</span><br></pre></td></tr></table></figure>
+
+<h4 id="创建并运行"><a href="#创建并运行" class="headerlink" title="创建并运行"></a>创建并运行</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cargo new Project</span><br><span class="line">cargo run</span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
   <entry>
@@ -531,27 +552,6 @@
 
 <p><code>x++</code> 不成立，会报错</p>
 <figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">y</span> = &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">x</span> = <span class="number">1</span>;</span><br><span class="line">        x++</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
-    <title>rust 安装</title>
-    <url>/2023/02/09/rust-%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><h6 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl https://sh.rustup.rs -sSf | sh</span><br></pre></td></tr></table></figure>
-
-<h6 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h6><p>使用 rustup 安装，一次输入或选择以下选项，第二个选择 MSVC 可能会出问题</p>
-<ul>
-<li>Customize installation</li>
-<li>x86_64-pc-windows-gnu</li>
-<li>stable</li>
-<li>default</li>
-<li>yes</li>
-<li>Proceed with installation</li>
-</ul>
-<h4 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ rustup self uninstall</span><br></pre></td></tr></table></figure>
-
-<h4 id="版本查看"><a href="#版本查看" class="headerlink" title="版本查看"></a>版本查看</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ rustc -V</span><br><span class="line">rustc 1.56.1 (59eed8a2a 2021-11-01)</span><br><span class="line"></span><br><span class="line">$ cargo -V</span><br><span class="line">cargo 1.57.0 (b2e52d7ca 2021-10-21)</span><br></pre></td></tr></table></figure>
-
-<h4 id="创建并运行"><a href="#创建并运行" class="headerlink" title="创建并运行"></a>创建并运行</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cargo new Project</span><br><span class="line">cargo run</span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
   <entry>
