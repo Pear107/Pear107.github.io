@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>OpenCV 编译（包含 Contrib 模块）</title>
-    <url>/2023/02/18/OpenCV-%E7%BC%96%E8%AF%91%EF%BC%88%E5%8C%85%E5%90%AB-Contrib-%E6%A8%A1%E5%9D%97%EF%BC%89/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>OpenCV</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JavaScript 闭包</title>
     <url>/2023/02/07/JavaScript-%E9%97%AD%E5%8C%85/</url>
     <content><![CDATA[<h2 id="闭包使用"><a href="#闭包使用" class="headerlink" title="闭包使用"></a>闭包使用</h2><h3 id="错误示范"><a href="#错误示范" class="headerlink" title="错误示范"></a>错误示范</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">father</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> t = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">son</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    t = t + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> t;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">son</span>();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> m = <span class="title function_">father</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(m);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(m);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(m);</span><br></pre></td></tr></table></figure>
@@ -30,6 +22,38 @@
 ]]></content>
       <tags>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>OpenCV 编译（包含 Contrib 模块）</title>
+    <url>/2023/02/18/OpenCV-%E7%BC%96%E8%AF%91%EF%BC%88%E5%8C%85%E5%90%AB-Contrib-%E6%A8%A1%E5%9D%97%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="OpenCV-下载"><a href="#OpenCV-下载" class="headerlink" title="OpenCV 下载"></a>OpenCV 下载</h2><p>下载地址 <a href="https://opencv.org/releases/">https://opencv.org/releases/</a></p>
+<p><img src="/img/uTools_1676785638590.png" alt="OpenCV"></p>
+<p>点击 source 下载</p>
+<h2 id="OpenCV-Contrib-下载"><a href="#OpenCV-Contrib-下载" class="headerlink" title="OpenCV-Contrib 下载"></a>OpenCV-Contrib 下载</h2><p>下载地址 <a href="https://www.raoyunsoft.com/opencv/opencv_contrib/">https://www.raoyunsoft.com/opencv/opencv_contrib/</a></p>
+<p><img src="/img/uTools_1676786045142.png" alt="OpenCV-Contrib"></p>
+<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>首先打开 cmake-gui</p>
+<p><img src="/img/uTools_1676787496973.png" alt="cmake-gui"></p>
+<p>点击 configure，选择 Visual Studio 2019，点击 Finish</p>
+<p><img src="/img/uTools_1676787614494.png" alt="cmake-gui"></p>
+<p>添加 contrib 模块（如果要编译 QT，确保 QT 的 cmake 目录在环境变量里，并勾选 WITH_QT）</p>
+<p><img src="/img/uTools_1676788578088.png" alt="contrib"></p>
+<p>点击 configure，确保没有红色之后点击 generate</p>
+<p><img src="/img/uTools_1676788387531.png" alt="cmake-gui"></p>
+<p>点击 open project，右键解决方案</p>
+<p><img src="/img/uTools_1676788731713.png" alt="解决方案"></p>
+<p>选择批生成，勾选 ALL_BUILD 和 INSTALL，选择生成</p>
+<p><img src="/img/uTools_1676788846834.png" alt="批生成"></p>
+<p>编译成功后在 build/install 目录可有看到生成的文件</p>
+<h2 id="configure-过程中爆红"><a href="#configure-过程中爆红" class="headerlink" title="configure 过程中爆红"></a>configure 过程中爆红</h2><p>由于网速原因，一些模块无法下载，需要按照以下方式下载</p>
+<ul>
+<li>对于常见的如 ffmpeg，需要通过添加代理，并需要把 <code>raw.githubusercontent.com</code> 的 <code>IP</code> 地址添加到系统 <code>hosts</code> 文件中去</li>
+<li>有些下载地址已经改变，根据错误文件提示找到对于 cmake 文件路径，替换 cmake 中的下载路径（原目录跟新目录比较接近）</li>
+<li>前两种方法都无法解决，用方法 2 找到正确的下载路径并下载，参照 .cache 目录（前两种方法生成）中的添加方式去添加，注意要根据电脑系统设置正确的 hash</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>OpenCV</tag>
       </tags>
   </entry>
   <entry>
@@ -121,6 +145,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2023/02/07/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>defineProperty 实践</title>
     <url>/2023/02/08/defineProperty-%E5%AE%9E%E8%B7%B5/</url>
     <content><![CDATA[<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(obj, prop, descriptor);</span><br></pre></td></tr></table></figure>
@@ -191,22 +233,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/02/07/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>rust 变量绑定与解构</title>
+    <url>/2023/02/09/rust-%E5%8F%98%E9%87%8F%E7%BB%91%E5%AE%9A%E4%B8%8E%E8%A7%A3%E6%9E%84/</url>
+    <content><![CDATA[<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="comment">// 变量不可变可以避免运行时检查从而提高性能，但是有时需要给变量重新赋值时，</span></span><br><span class="line">    <span class="comment">// 针对不可变的变量需要重新构造一个新的重名对象，而构造重名对象的过程时丧失了性能。</span></span><br><span class="line">    <span class="comment">// 一般情况下建议使用不可变变量，如果需要使用大量的临时变量则使用 mut</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;!&quot;</span>, a);</span><br><span class="line">    <span class="comment">// 要想使用可以修改的变量，在变量前加 mut</span></span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">b</span> = <span class="number">3</span>;</span><br><span class="line">    <span class="comment">// 只能修改值，不能修改类型</span></span><br><span class="line">    <span class="comment">// b = &quot;b&quot;;</span></span><br><span class="line">    b = <span class="number">4</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;:&#123;1&#125;&quot;</span>, a, b);</span><br><span class="line">    <span class="comment">// 如果一个变量没有被使用 rust 会警告，如果一个变量不会被使用，应该在签名加下划线</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">_y</span> = a;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">_x</span> = b;</span><br><span class="line">    <span class="comment">// rust 解构</span></span><br><span class="line">    <span class="keyword">let</span> (_c, <span class="keyword">mut</span> _d): (<span class="type">bool</span>, <span class="type">bool</span>) = (<span class="literal">true</span>, <span class="literal">true</span>);</span><br><span class="line">    <span class="comment">// 常量不能加 mut，并且必须注明类型。并且最好大写</span></span><br><span class="line">    <span class="keyword">const</span> _E: &amp;<span class="type">str</span> = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">    <span class="comment">// 变量遮蔽</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">a</span> = <span class="string">&quot;hello a&quot;</span>;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, a);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, a);</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">0x1A</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">0o1234567</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">0b10001111</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">123_321</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, a);</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">3.2</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">c</span>: <span class="type">f32</span> = a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Struct</span> &#123;</span><br><span class="line">    e: <span class="type">i32</span>,</span><br><span class="line">    f: <span class="type">i32</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> (a, b, c, d, e);</span><br><span class="line">    (a, b) = (<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">    [c, .., d, _] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">    Struct &#123; e, .. &#125; = Struct &#123; e: <span class="number">5</span>, f: <span class="number">6</span> &#125;;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, a);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, b);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, c);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, d);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
+      <tags>
+        <tag>rust</tag>
+      </tags>
   </entry>
   <entry>
     <title>hexo 指令</title>
@@ -378,41 +413,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>rust 变量绑定与解构</title>
-    <url>/2023/02/09/rust-%E5%8F%98%E9%87%8F%E7%BB%91%E5%AE%9A%E4%B8%8E%E8%A7%A3%E6%9E%84/</url>
-    <content><![CDATA[<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="comment">// 变量不可变可以避免运行时检查从而提高性能，但是有时需要给变量重新赋值时，</span></span><br><span class="line">    <span class="comment">// 针对不可变的变量需要重新构造一个新的重名对象，而构造重名对象的过程时丧失了性能。</span></span><br><span class="line">    <span class="comment">// 一般情况下建议使用不可变变量，如果需要使用大量的临时变量则使用 mut</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;!&quot;</span>, a);</span><br><span class="line">    <span class="comment">// 要想使用可以修改的变量，在变量前加 mut</span></span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">b</span> = <span class="number">3</span>;</span><br><span class="line">    <span class="comment">// 只能修改值，不能修改类型</span></span><br><span class="line">    <span class="comment">// b = &quot;b&quot;;</span></span><br><span class="line">    b = <span class="number">4</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;:&#123;1&#125;&quot;</span>, a, b);</span><br><span class="line">    <span class="comment">// 如果一个变量没有被使用 rust 会警告，如果一个变量不会被使用，应该在签名加下划线</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">_y</span> = a;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">_x</span> = b;</span><br><span class="line">    <span class="comment">// rust 解构</span></span><br><span class="line">    <span class="keyword">let</span> (_c, <span class="keyword">mut</span> _d): (<span class="type">bool</span>, <span class="type">bool</span>) = (<span class="literal">true</span>, <span class="literal">true</span>);</span><br><span class="line">    <span class="comment">// 常量不能加 mut，并且必须注明类型。并且最好大写</span></span><br><span class="line">    <span class="keyword">const</span> _E: &amp;<span class="type">str</span> = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">    <span class="comment">// 变量遮蔽</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">a</span> = <span class="string">&quot;hello a&quot;</span>;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, a);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, a);</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">0x1A</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">0o1234567</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">0b10001111</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">123_321</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, a);</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">a</span> = <span class="number">3.2</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">c</span>: <span class="type">f32</span> = a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Struct</span> &#123;</span><br><span class="line">    e: <span class="type">i32</span>,</span><br><span class="line">    f: <span class="type">i32</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> (a, b, c, d, e);</span><br><span class="line">    (a, b) = (<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">    [c, .., d, _] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">    Struct &#123; e, .. &#125; = Struct &#123; e: <span class="number">5</span>, f: <span class="number">6</span> &#125;;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, a);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, b);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, c);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, d);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>rust</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>rust 安装</title>
-    <url>/2023/02/09/rust-%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl https://sh.rustup.rs -sSf | sh</span><br></pre></td></tr></table></figure>
-
-<h3 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h3><p>使用 rustup 安装，一次输入或选择以下选项，第二个选择 MSVC 可能会出问题</p>
-<ul>
-<li>Customize installation</li>
-<li>x86_64-pc-windows-gnu</li>
-<li>stable</li>
-<li>default</li>
-<li>yes</li>
-<li>Proceed with installation</li>
-</ul>
-<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rustup self uninstall</span><br></pre></td></tr></table></figure>
-
-<h2 id="版本查看"><a href="#版本查看" class="headerlink" title="版本查看"></a>版本查看</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rustc -V</span><br><span class="line">&gt;rustc 1.56.1 (59eed8a2a 2021-11-01)</span><br><span class="line"></span><br><span class="line">cargo -V</span><br><span class="line">&gt;cargo 1.57.0 (b2e52d7ca 2021-10-21)</span><br></pre></td></tr></table></figure>
-
-<h2 id="创建并运行"><a href="#创建并运行" class="headerlink" title="创建并运行"></a>创建并运行</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cargo new Project</span><br><span class="line">cargo run</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>rust</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>rust 基本类型</title>
     <url>/2023/02/09/rust-%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/</url>
     <content><![CDATA[<h2 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h2><h3 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h3><table>
@@ -567,6 +567,30 @@
       </tags>
   </entry>
   <entry>
+    <title>rust 安装</title>
+    <url>/2023/02/09/rust-%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl https://sh.rustup.rs -sSf | sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h3><p>使用 rustup 安装，一次输入或选择以下选项，第二个选择 MSVC 可能会出问题</p>
+<ul>
+<li>Customize installation</li>
+<li>x86_64-pc-windows-gnu</li>
+<li>stable</li>
+<li>default</li>
+<li>yes</li>
+<li>Proceed with installation</li>
+</ul>
+<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rustup self uninstall</span><br></pre></td></tr></table></figure>
+
+<h2 id="版本查看"><a href="#版本查看" class="headerlink" title="版本查看"></a>版本查看</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rustc -V</span><br><span class="line">&gt;rustc 1.56.1 (59eed8a2a 2021-11-01)</span><br><span class="line"></span><br><span class="line">cargo -V</span><br><span class="line">&gt;cargo 1.57.0 (b2e52d7ca 2021-10-21)</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建并运行"><a href="#创建并运行" class="headerlink" title="创建并运行"></a>创建并运行</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cargo new Project</span><br><span class="line">cargo run</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>rust</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>墙与门</title>
     <url>/2023/02/08/%E5%A2%99%E4%B8%8E%E9%97%A8/</url>
     <content><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>你被给定一个 m × n 的二维网格 rooms ，网格中有以下三种可能的初始化值：</p>
@@ -583,6 +607,29 @@
 ]]></content>
       <tags>
         <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>创建服务器 git 仓库</title>
+    <url>/2023/02/19/%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8-git-%E4%BB%93%E5%BA%93/</url>
+    <content><![CDATA[<h2 id="创建-git-用户并配置ssh-key"><a href="#创建-git-用户并配置ssh-key" class="headerlink" title="创建 git 用户并配置ssh key"></a>创建 git 用户并配置ssh key</h2><p>创建一个 <code>git</code> 用户，并在家目录下建立一个 <code>.ssh</code> 目录，赋予其700权限。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo adduser -m git</span><br><span class="line">su git</span><br><span class="line"><span class="built_in">mkdir</span> ~/.ssh &amp;&amp; <span class="built_in">chmod</span> 700 ~/.ssh</span><br><span class="line"><span class="built_in">touch</span> ~/.ssh/authorized_keys &amp;&amp; <span class="built_in">chmod</span> 600 ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+
+<p>然后只需要将 <code>ssh</code> 连接的公钥复制到 <code>authorized_keys</code> 文件中就可以通过 <code>ssh</code> 连接 <code>git</code> 用户了</p>
+<h2 id="限制git用户的shell"><a href="#限制git用户的shell" class="headerlink" title="限制git用户的shell"></a>限制git用户的shell</h2><p>上面创建的git用户可以通过ssh连接，进行任何操作。为了安全性，我们需要将git用户的活动限制在与Git相关的范围，也就是把git用户的shell改成 <code>git-shell</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo chsh git -s $(<span class="built_in">which</span> git-shell)</span><br></pre></td></tr></table></figure>
+
+<p>当然通过修改<code>/etc/profile</code>也可以达成这一目的。</p>
+<h2 id="创建-blog-对应的-git-仓库"><a href="#创建-blog-对应的-git-仓库" class="headerlink" title="创建 blog 对应的 git 仓库"></a>创建 blog 对应的 git 仓库</h2><p>在 <code>/www/wwwroot</code>下，创建一个空的<code>.git</code>仓库</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init .git --bare --shared</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config -e</span><br></pre></td></tr></table></figure>
+
+<p>在 receive 下添加 <code>denyCurrentBranch = ignore</code>，保证仓库能更新</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">[receive]</span><br><span class="line">        denyNonFastforwards = true</span><br><span class="line">        denyCurrentBranch = ignore</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -609,6 +656,23 @@
       </tags>
   </entry>
   <entry>
+    <title>微信小程序 canvas 兼容问题</title>
+    <url>/2023/02/18/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-canvas-%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>根据官方文档，微信小程序有两个不同版本的 <code>canvas</code>，官方推荐使用新版 <code>canvas</code>，不过实际实践中我发现在开发者工具可以使用新版 <code>canvas</code>，但在部分真机仍需要使用旧版写法</p>
+<p>新版 <code>canvas</code> 标签</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">class</span>=<span class="string">&quot;canvas&quot;</span> <span class="attr">type</span>=<span class="string">&quot;2d&quot;</span> <span class="attr">id</span>=<span class="string">&quot;canvas&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 100px;height: 100px;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>旧版 <code>canvas</code> 标签</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">class</span>=<span class="string">&quot;canvas&quot;</span> <span class="attr">canvas-id</span>=<span class="string">&quot;canvas&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 100px;height: 100px;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>获取 canvas</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> query = wx.<span class="title function_">createSelectorQuery</span>().<span class="title function_">in</span>(<span class="variable language_">this</span>);</span><br><span class="line">query</span><br><span class="line">  .<span class="title function_">select</span>(<span class="string">&quot;#canvas&quot;</span>)</span><br><span class="line">  .<span class="title function_">fields</span>(&#123;</span><br><span class="line">    <span class="attr">node</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">size</span>: <span class="literal">true</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">exec</span>(<span class="keyword">async</span> (res) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> dom = res[<span class="number">0</span>];</span><br><span class="line">    <span class="comment">// 判断 node 是否为 null，如果是调用旧版接口，否则调用新版接口</span></span><br><span class="line">    <span class="keyword">if</span> (dom.<span class="property">node</span> !== <span class="literal">null</span>) &#123;</span><br><span class="line">      <span class="keyword">const</span> <span class="attr">canvas</span>: <span class="title class_">WechatMiniprogram</span>.<span class="property">Canvas</span> = dom.<span class="property">node</span>;</span><br><span class="line">      <span class="keyword">const</span> <span class="attr">ctx</span>: <span class="title class_">WechatMiniprogram</span>.<span class="property">RenderingContext</span> = canvas.<span class="title function_">getContext</span>(</span><br><span class="line">        <span class="string">&quot;2d&quot;</span></span><br><span class="line">      );</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> <span class="attr">ctx</span>: <span class="title class_">WechatMiniprogram</span>.<span class="property">CanvasContext</span> = wx.<span class="title function_">createCanvasContext</span>(</span><br><span class="line">        <span class="string">&quot;canvas&quot;</span>,</span><br><span class="line">        <span class="variable language_">this</span></span><br><span class="line">      );</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>微信小程序</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>微信小程序全局组件封装</title>
     <url>/2023/02/18/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/</url>
     <content><![CDATA[<p>在 <code>miniprogram</code> 目录新建 <code>components\custom-modal</code> 目录，并在该目录下创建一个组件</p>
@@ -626,23 +690,6 @@
 
 <p>在其他界面中使用</p>
 <figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Component</span>&lt;<span class="title class_">TData</span>, <span class="title class_">TProperty</span>, <span class="title class_">TMethod</span>, <span class="title class_">TCustomInstanceProperty</span>, <span class="title class_">TIsPage</span>&gt;(&#123;</span><br><span class="line">  <span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="title function_">use</span>(<span class="params"></span>)&#123;</span><br><span class="line">      app.<span class="title function_">showModal</span>(<span class="variable language_">this</span>, &#123;</span><br><span class="line">          <span class="attr">caption</span>: <span class="string">&quot;错误&quot;</span>,</span><br><span class="line">          <span class="attr">content</span>: <span class="string">&quot;昵称不能为空&quot;</span>,</span><br><span class="line">          <span class="attr">confrim</span>: <span class="function">() =&gt;</span> &#123;&#125;,</span><br><span class="line">          <span class="attr">showCancel</span>: <span class="literal">false</span>,</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">export</span> &#123;&#125;;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>微信小程序</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>微信小程序 canvas 兼容问题</title>
-    <url>/2023/02/18/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-canvas-%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>根据官方文档，微信小程序有两个不同版本的 <code>canvas</code>，官方推荐使用新版 <code>canvas</code>，不过实际实践中我发现在开发者工具可以使用新版 <code>canvas</code>，但在部分真机仍需要使用旧版写法</p>
-<p>新版 <code>canvas</code> 标签</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">class</span>=<span class="string">&quot;canvas&quot;</span> <span class="attr">type</span>=<span class="string">&quot;2d&quot;</span> <span class="attr">id</span>=<span class="string">&quot;canvas&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 100px;height: 100px;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>旧版 <code>canvas</code> 标签</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">class</span>=<span class="string">&quot;canvas&quot;</span> <span class="attr">canvas-id</span>=<span class="string">&quot;canvas&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 100px;height: 100px;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>获取 canvas</p>
-<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> query = wx.<span class="title function_">createSelectorQuery</span>().<span class="title function_">in</span>(<span class="variable language_">this</span>);</span><br><span class="line">query</span><br><span class="line">  .<span class="title function_">select</span>(<span class="string">&quot;#canvas&quot;</span>)</span><br><span class="line">  .<span class="title function_">fields</span>(&#123;</span><br><span class="line">    <span class="attr">node</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">size</span>: <span class="literal">true</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">exec</span>(<span class="keyword">async</span> (res) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> dom = res[<span class="number">0</span>];</span><br><span class="line">    <span class="comment">// 判断 node 是否为 null，如果是调用旧版接口，否则调用新版接口</span></span><br><span class="line">    <span class="keyword">if</span> (dom.<span class="property">node</span> !== <span class="literal">null</span>) &#123;</span><br><span class="line">      <span class="keyword">const</span> <span class="attr">canvas</span>: <span class="title class_">WechatMiniprogram</span>.<span class="property">Canvas</span> = dom.<span class="property">node</span>;</span><br><span class="line">      <span class="keyword">const</span> <span class="attr">ctx</span>: <span class="title class_">WechatMiniprogram</span>.<span class="property">RenderingContext</span> = canvas.<span class="title function_">getContext</span>(</span><br><span class="line">        <span class="string">&quot;2d&quot;</span></span><br><span class="line">      );</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> <span class="attr">ctx</span>: <span class="title class_">WechatMiniprogram</span>.<span class="property">CanvasContext</span> = wx.<span class="title function_">createCanvasContext</span>(</span><br><span class="line">        <span class="string">&quot;canvas&quot;</span>,</span><br><span class="line">        <span class="variable language_">this</span></span><br><span class="line">      );</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>微信小程序</tag>
@@ -723,6 +770,19 @@
       </tags>
   </entry>
   <entry>
+    <title>排序算法</title>
+    <url>/2023/02/08/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">bubbleSort</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = arr.<span class="property">length</span> - <span class="number">1</span>; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="title function_">fn</span>(arr[j], arr[j + <span class="number">1</span>])) &#123;</span><br><span class="line">        arr[j] = arr[i] + arr[j];</span><br><span class="line">        arr[i] = arr[j] - arr[i];</span><br><span class="line">        arr[j] = arr[j] - arr[i];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">selectSort</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = i; j &lt; arr.<span class="property">length</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[j] &lt; arr[i]) &#123;</span><br><span class="line">        arr[j] = arr[i] + arr[j];</span><br><span class="line">        arr[i] = arr[j] - arr[i];</span><br><span class="line">        arr[j] = arr[j] - arr[i];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">insertionSort</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> len = arr.<span class="property">length</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[i] &lt; arr[j]) &#123;</span><br><span class="line">        arr[i] = arr[i] + arr[j];</span><br><span class="line">        arr[j] = arr[i] - arr[j];</span><br><span class="line">        arr[i] = arr[i] - arr[j];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>滑动窗口最大值</title>
     <url>/2023/02/08/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC/</url>
     <content><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>给你一个整数数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。</p>
@@ -744,42 +804,6 @@
 ]]></content>
       <tags>
         <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>排序算法</title>
-    <url>/2023/02/08/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">bubbleSort</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = arr.<span class="property">length</span> - <span class="number">1</span>; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="title function_">fn</span>(arr[j], arr[j + <span class="number">1</span>])) &#123;</span><br><span class="line">        arr[j] = arr[i] + arr[j];</span><br><span class="line">        arr[i] = arr[j] - arr[i];</span><br><span class="line">        arr[j] = arr[j] - arr[i];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">selectSort</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = i; j &lt; arr.<span class="property">length</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[j] &lt; arr[i]) &#123;</span><br><span class="line">        arr[j] = arr[i] + arr[j];</span><br><span class="line">        arr[i] = arr[j] - arr[i];</span><br><span class="line">        arr[j] = arr[j] - arr[i];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">insertionSort</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> len = arr.<span class="property">length</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[i] &lt; arr[j]) &#123;</span><br><span class="line">        arr[i] = arr[i] + arr[j];</span><br><span class="line">        arr[j] = arr[i] - arr[j];</span><br><span class="line">        arr[i] = arr[i] - arr[j];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>创建服务器 git 仓库</title>
-    <url>/2023/02/19/%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8-git-%E4%BB%93%E5%BA%93/</url>
-    <content><![CDATA[<h2 id="创建-git-用户并配置ssh-key"><a href="#创建-git-用户并配置ssh-key" class="headerlink" title="创建 git 用户并配置ssh key"></a>创建 git 用户并配置ssh key</h2><p>创建一个 <code>git</code> 用户，并在家目录下建立一个 <code>.ssh</code> 目录，赋予其700权限。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo adduser -m git</span><br><span class="line">su git</span><br><span class="line"><span class="built_in">mkdir</span> ~/.ssh &amp;&amp; <span class="built_in">chmod</span> 700 ~/.ssh</span><br><span class="line"><span class="built_in">touch</span> ~/.ssh/authorized_keys &amp;&amp; <span class="built_in">chmod</span> 600 ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
-
-<p>然后只需要将 <code>ssh</code> 连接的公钥复制到 <code>authorized_keys</code> 文件中就可以通过 <code>ssh</code> 连接 <code>git</code> 用户了</p>
-<h2 id="限制git用户的shell"><a href="#限制git用户的shell" class="headerlink" title="限制git用户的shell"></a>限制git用户的shell</h2><p>上面创建的git用户可以通过ssh连接，进行任何操作。为了安全性，我们需要将git用户的活动限制在与Git相关的范围，也就是把git用户的shell改成 <code>git-shell</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo chsh git -s $(<span class="built_in">which</span> git-shell)</span><br></pre></td></tr></table></figure>
-
-<p>当然通过修改<code>/etc/profile</code>也可以达成这一目的。</p>
-<h2 id="创建-blog-对应的-git-仓库"><a href="#创建-blog-对应的-git-仓库" class="headerlink" title="创建 blog 对应的 git 仓库"></a>创建 blog 对应的 git 仓库</h2><p>在 <code>/www/wwwroot</code>下，创建一个空的<code>.git</code>仓库</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git --bare init --shared</span><br></pre></td></tr></table></figure>
-
-<h2 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config -e</span><br></pre></td></tr></table></figure>
-
-<p>在 receive 下添加 <code>denyCurrentBranch = ignore</code>，保证仓库能更新</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">[receive]</span><br><span class="line">        denyNonFastforwards = true</span><br><span class="line">        denyCurrentBranch = ignore</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>git</tag>
       </tags>
   </entry>
 </search>
