@@ -6,7 +6,7 @@
   <link href="http://yearr107.top/atom.xml" rel="self"/>
   
   <link href="http://yearr107.top/"/>
-  <updated>2023-07-07T06:55:05.555Z</updated>
+  <updated>2023-07-07T09:16:59.239Z</updated>
   <id>http://yearr107.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SSH</title>
+    <link href="http://yearr107.top/2023/07/07/SSH/"/>
+    <id>http://yearr107.top/2023/07/07/SSH/</id>
+    <published>2023-07-07T09:06:25.000Z</published>
+    <updated>2023-07-07T09:16:59.239Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;权限设置&quot;&gt;&lt;a href=&quot;#权限设置&quot; class=&quot;headerlink&quot; title=&quot;权限设置&quot;&gt;&lt;/a&gt;权限设置&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+    <category term="网络安全" scheme="http://yearr107.top/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -420,21 +443,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>UML</title>
-    <link href="http://yearr107.top/2023/04/14/UML/"/>
-    <id>http://yearr107.top/2023/04/14/UML/</id>
-    <published>2023-04-13T21:48:16.000Z</published>
-    <updated>2023-07-07T06:55:05.555Z</updated>
-    
-    
-    
-    
-    
-    <category term="C++" scheme="http://yearr107.top/tags/C/"/>
     
   </entry>
   
