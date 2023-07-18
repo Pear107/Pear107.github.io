@@ -508,16 +508,14 @@
   <entry>
     <title>C++ nullptr 和 NULL</title>
     <url>/2023/03/25/C-nullptr-%E5%92%8C-NULL/</url>
-    <content><![CDATA[<p>nullptr 和 NULL 都是C++中表示空指针的常量，它们的含义和使用方式略有不同。</p>
-<h2 id="nullptr"><a href="#nullptr" class="headerlink" title="nullptr"></a>nullptr</h2><ul>
-<li>nullptr 是C++11中引入的关键字，用于表示空指针。它的定义如下：<code>nullptr_t nullptr = 0</code></li>
-<li>nullptr 的类型是 nullptr_t，它是一种特殊的空指针类型，可以隐式转换为任意类型的空指针。在C++11之前，通常使用0或者NULL来表示空指针，但由于0或者NULL可以转换为整型，可能会引起一些问题，因此C++11引入了 nullptr 关键字来避免这种问题。</li>
+    <content><![CDATA[<h2 id="nullptr"><a href="#nullptr" class="headerlink" title="nullptr"></a>nullptr</h2><ul>
+<li>nullptr 是 C++11 中引入的关键字，用于表示空指针。它的定义如下：<code>nullptr_t nullptr = 0</code></li>
+<li>nullptr 的类型是 nullptr_t，它是一种特殊的空指针类型，可以隐式转换为任意类型的空指针。在 C++11 之前，通常使用 0 或者 NULL 来表示空指针，但由于 0 或者 NULL 可以转换为整型，可能会引起一些问题，因此 C++11 引入了 nullptr 关键字来避免这种问题。</li>
 </ul>
 <h2 id="NULL"><a href="#NULL" class="headerlink" title="NULL"></a>NULL</h2><ul>
 <li>NULL 是 C++ 中表示空指针的宏定义，在 C++11 之前广泛使用。它的定义如下：<code>#define NULL 0</code></li>
 <li>NULL 实际上是一个整型常量 0，可以被隐式转换为任意类型的空指针。但由于 0 也可以被隐式转换为整型，可能会出现一些问题，因此在 C++11 中推荐使用 nullptr 代替 NULL。</li>
 </ul>
-<p>总的来说，nullptr是一种更加安全和明确的表示空指针的方式，建议在C++11及以上的版本中使用nullptr代替NULL。</p>
 ]]></content>
       <tags>
         <tag>C++</tag>
@@ -526,8 +524,7 @@
   <entry>
     <title>C++ static</title>
     <url>/2023/03/25/C-static/</url>
-    <content><![CDATA[<p>在C++中，static 关键字可以用于变量、函数和类的成员，其作用如下：</p>
-<ul>
+    <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
 <li>用于变量：static 关键字可以将变量声明为静态变量，即该变量在程序运行期间只被初始化一次，不会被销毁，生命周期与程序相同。同时，静态变量的作用域只在声明它的文件内部。</li>
 <li>用于函数：static 关键字可以将函数声明为静态函数，即该函数只能在声明它的文件内部调用，不能被其他文件调用。静态函数可以减少函数名的污染，提高程序的安全性。</li>
 <li>用于类的成员：static 关键字可以将类的成员声明为静态成员，即该成员被所有类的对象共享，不依赖于任何对象而存在，可以直接通过类名访问。静态成员可以用于记录类的某些全局信息，或者用于实现单例模式等。</li>
@@ -535,16 +532,11 @@
 <p>例如：</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">static</span> <span class="type">int</span> count;</span><br><span class="line">    <span class="built_in">MyClass</span>() &#123; count++; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> MyClass::count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    MyClass obj1;</span><br><span class="line">    MyClass obj2;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Count: &quot;</span> &lt;&lt; MyClass::count &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>这个程序定义了一个 MyClass 类，其中包含了一个静态成员 count。在程序运行期间，每创建一个 MyClass 对象，count 的值就会自增1。最后输出 count 的值，即为对象的总数。由于 count 是静态成员，可以直接通过类名访问。</p>
+<p>这个程序定义了一个 MyClass 类，其中包含了一个静态成员 count。在程序运行期间，每创建一个 MyClass 对象，count 的值就会自增 1。最后输出 count 的值，即为对象的总数。由于 count 是静态成员，可以直接通过类名访问。</p>
 ]]></content>
       <tags>
         <tag>C++</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>C++ typeof</title>
-    <url>/2023/04/18/C-typeof/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>C++ vector</title>
@@ -2137,7 +2129,7 @@
 </tr>
 <tr>
 <td>%e</td>
-<td>指数（基底写为e）</td>
+<td>指数（基底写为 e）</td>
 </tr>
 <tr>
 <td>%E</td>
@@ -2175,7 +2167,8 @@
 
 <h2 id="format"><a href="#format" class="headerlink" title="format"></a>format</h2><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&#123;0:b&#125;,&#123;0:c&#125;,&#123;0:d&#125;,&#123;0:o&#125;,&#123;0:x&#125;,&#123;0:X&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">425</span>)</span><br></pre></td></tr></table></figure>
 
-<h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><p>&lt;填充&gt;&lt;对齐&gt;&lt;宽度&gt;&lt;,&gt;&lt;.精度&gt;&lt;类型&gt;</p>
+<h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;填充&gt;&lt;对齐&gt;&lt;宽度&gt;&lt;,&gt;&lt;.精度&gt;&lt;类型&gt;</span><br></pre></td></tr></table></figure>
+
 <h3 id="填充"><a href="#填充" class="headerlink" title="填充"></a>填充</h3><p>指宽度内除了参数外的字符采用什么方式表示，默认采用空格，可以通过填充更换。</p>
 <h3 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h3><p>指参数在宽度内输出时的对齐方式，分别使用 &lt;、&gt; 和 ^ 三个符号表示左对齐、右对齐和居中对齐。</p>
 <h3 id="宽度"><a href="#宽度" class="headerlink" title="宽度"></a>宽度</h3><p>指当前槽的设定输出字符宽度，如果该槽对应的 format() 参数长度比宽度设定值大，则使用参数实际长度。如果该值的实际位数小于指定宽度，则位数将被默认以空格字符补充。</p>
@@ -2184,7 +2177,6 @@
 
 <h3 id="精度"><a href="#精度" class="headerlink" title="精度"></a>精度</h3><p>表示两个含义，由小数点（.）开头。对于浮点数，精度表示小数部分输出的有效位数。对于字符串，精度表示输出的最大长度。</p>
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&#123;0:.2f&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">12345.67890</span>)</span><br><span class="line"><span class="string">&quot;&#123;0:H^20.3f&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">12345.67890</span>)</span><br><span class="line"><span class="string">&quot;&#123;0:.4&#125;&quot;</span>.<span class="built_in">format</span>(<span class="string">&quot;PYTHON&quot;</span>)</span><br></pre></td></tr></table></figure>
-
 
 <h3 id="类型-1"><a href="#类型-1" class="headerlink" title="类型"></a>类型</h3><ul>
 <li>b: 输出整数的二进制方式</li>
@@ -2198,10 +2190,10 @@
 <li>f: 输出浮点数的标准浮点形式；</li>
 <li>%: 输出浮点数的百分形式。</li>
 </ul>
-<h2 id="f-string"><a href="#f-string" class="headerlink" title="f-string"></a>f-string</h2><h3 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h3><p>&lt;填充&gt;&lt;对齐&gt;&lt;宽度&gt;&lt;,&gt;&lt;.精度&gt;&lt;类型&gt;</p>
+<h2 id="f-string"><a href="#f-string" class="headerlink" title="f-string"></a>f-string</h2><h3 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;填充&gt;&lt;对齐&gt;&lt;宽度&gt;&lt;,&gt;&lt;.精度&gt;&lt;类型&gt;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
-        <tag>C++</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -2209,22 +2201,22 @@
     <url>/2023/04/23/Python-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</url>
     <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="comment"># 可能出现异常的代码</span></span><br><span class="line">    x = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入一个数字：&quot;</span>))</span><br><span class="line">    y = <span class="number">10</span> / x</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;计算结果为：&quot;</span>, y)</span><br><span class="line"><span class="keyword">except</span> ValueError:</span><br><span class="line">    <span class="comment"># 处理ValueError异常</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;输入的不是数字，请重新输入！&quot;</span>)</span><br><span class="line"><span class="keyword">except</span> ZeroDivisionError:</span><br><span class="line">    <span class="comment"># 处理ZeroDivisionError异常</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;除数不能为零，请重新输入！&quot;</span>)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">    <span class="comment"># 处理其他异常</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;程序出现了异常：&quot;</span>, e)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="comment"># 没有异常时执行的代码</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;程序执行完毕！&quot;</span>)</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    <span class="comment"># 无论是否有异常，都会执行的代码</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;程序结束！&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-<p>在上面的代码中，try-except 语句块中的代码可能会出现异常，如果出现异常，则根据异常类型执行对应的 except 语句块中的代码。如果没有出现异常，则执行 else 语句块中的代码。无论是否出现异常，都会执行finally语句块中的代码。在 except 语句块中可以使用多个 except 语句来处理不同类型的异常，也可以使用一个 except 语句来处理所有类型的异常，如上面的代码中的最后一个except语句。在 except 语句块中，可以使用 as 关键字将异常对象赋值给一个变量，方便输出异常信息。</p>
+<p>在上面的代码中，try-except 语句块中的代码可能会出现异常，如果出现异常，则根据异常类型执行对应的 except 语句块中的代码。如果没有出现异常，则执行 else 语句块中的代码。无论是否出现异常，都会执行 finally 语句块中的代码。在 except 语句块中可以使用多个 except 语句来处理不同类型的异常，也可以使用一个 except 语句来处理所有类型的异常，如上面的代码中的最后一个 except 语句。在 except 语句块中，可以使用 as 关键字将异常对象赋值给一个变量，方便输出异常信息。</p>
 ]]></content>
       <tags>
-        <tag>C++</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
     <title>Python 配置文件</title>
     <url>/2023/04/24/Python-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<h2 id="ini"><a href="#ini" class="headerlink" title="ini"></a>ini</h2><figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[mysql]</span></span><br><span class="line"><span class="attr">host</span>     = <span class="number">127.0</span>.<span class="number">0.1</span></span><br><span class="line"><span class="attr">user</span>     = root</span><br><span class="line"><span class="attr">password</span> = <span class="number">123456</span></span><br><span class="line"><span class="attr">port</span>     = <span class="number">3306</span></span><br><span class="line"><span class="attr">database</span> = mysql</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h2 id="ini"><a href="#ini" class="headerlink" title="ini"></a>ini</h2><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[mysql]</span></span><br><span class="line"><span class="attr">host</span>     = <span class="number">127.0</span>.<span class="number">0.1</span></span><br><span class="line"><span class="attr">user</span>     = root</span><br><span class="line"><span class="attr">password</span> = <span class="number">123456</span></span><br><span class="line"><span class="attr">port</span>     = <span class="number">3306</span></span><br><span class="line"><span class="attr">database</span> = mysql</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">cfg = ConfigParser()</span><br><span class="line">cfg.read(<span class="string">&quot;./src/config.ini&quot;</span>)</span><br><span class="line">SQLALCHEMY_DATABASE_URL = <span class="string">&#x27;mysql+pymysql://%s:%s@%s:%d/%s&#x27;</span> % (cfg.get(<span class="string">&quot;mysql&quot;</span>, <span class="string">&quot;user&quot;</span>), cfg.get(<span class="string">&quot;mysql&quot;</span>, <span class="string">&quot;password&quot;</span>),</span><br><span class="line">                                                              cfg.get(<span class="string">&quot;mysql&quot;</span>, <span class="string">&quot;host&quot;</span>), cfg.getint(<span class="string">&quot;mysql&quot;</span>, <span class="string">&quot;port&quot;</span>),</span><br><span class="line">                                                              cfg.get(<span class="string">&quot;mysql&quot;</span>, <span class="string">&quot;database&quot;</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="读取"><a href="#读取" class="headerlink" title="读取"></a>读取</h3><figure class="highlight py"><table><tr><td class="code"><pre><span class="line">cfg = ConfigParser()</span><br><span class="line">cfg.read(<span class="string">&quot;./src/config.ini&quot;</span>)</span><br><span class="line">SQLALCHEMY_DATABASE_URL = <span class="string">&#x27;mysql+pymysql://%s:%s@%s:%d/%s&#x27;</span> % (cfg.get(<span class="string">&quot;mysql&quot;</span>, <span class="string">&quot;user&quot;</span>), cfg.get(<span class="string">&quot;mysql&quot;</span>, <span class="string">&quot;password&quot;</span>),</span><br><span class="line">                                                              cfg.get(<span class="string">&quot;mysql&quot;</span>, <span class="string">&quot;host&quot;</span>), cfg.getint(<span class="string">&quot;mysql&quot;</span>, <span class="string">&quot;port&quot;</span>),</span><br><span class="line">                                                              cfg.get(<span class="string">&quot;mysql&quot;</span>, <span class="string">&quot;database&quot;</span>))</span><br></pre></td></tr></table></figure>
 
 <h2 id="toml"><a href="#toml" class="headerlink" title="toml"></a>toml</h2><h2 id="yaml"><a href="#yaml" class="headerlink" title="yaml"></a>yaml</h2>]]></content>
       <tags>
-        <tag>C++</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -4492,6 +4484,428 @@
 ]]></content>
       <tags>
         <tag>网络安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ 关键字</title>
+    <url>/2023/07/13/C-%E5%85%B3%E9%94%AE%E5%AD%97/</url>
+    <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><strong>1. asm</strong></p>
+<p>asm (指令字符串)：允许在 C++ 程序中嵌入汇编代码。</p>
+<p><strong>2. auto</strong></p>
+<p>auto（自动，automatic）是存储类型标识符，表明变量”自动”具有本地范围，块范围的变量声明（如 for 循环体内的变量声明）默认为 auto 存储类型。</p>
+<p><strong>3. bool</strong></p>
+<p>bool（布尔）类型，C++ 中的基本数据结构，其值可选为 true（真）或者 false（假）。C++ 中的 bool 类型可以和 int 混用，具体来说就是 0 代表 false，非 0 代表 true。bool 类型常用于条件判断和函数返回值。</p>
+<p><strong>4. break</strong></p>
+<p>break（中断、跳出），用在 switch 语句或者循环语句中。程序遇到 break 后，即跳过该程序段，继续后面的语句执行。</p>
+<p><strong>5. case</strong></p>
+<p>用于 switch 语句中，用于判断不同的条件类型。</p>
+<p><strong>6. catch</strong></p>
+<p>catch 和 try 语句一起用于异常处理。</p>
+<p><strong>7. char</strong></p>
+<p>char（字符，character）类型，C++ 中的基本数据结构，其值一般为 0~255 的 int。这 256 个字符对应着 256 个 ASCII 码。char 类型的数据需要用单引号 <strong>‘</strong> 括起来。</p>
+<p><strong>8. class</strong></p>
+<p>class（类）是 C++ 面向对象设计的基础。使用 class 关键字声明一个类。</p>
+<p><strong>9. const</strong></p>
+<p>const（常量的，constant）所修饰的对象或变量不能被改变，修饰函数时，该函数不能改变在该函数外面声明的变量也不能调用任何非 const 函数。在函数的声明与定义时都要加上 const，放在函数参数列表的最后一个括号后。在 C++ 中，用 const 声明一个变量，意味着该变量就是一个带类型的常量，可以代替 #define，且比 #define 多一个类型信息，且它执行内链接，可放在头文件中声明；但在 C 中，其声明则必须放在源文件（即 .C 文件）中，在 C 中 const 声明一个变量，除了不能改变其值外，它仍是一具变量。如:</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">constdouble <span class="title">pi</span><span class="params">(<span class="number">3.14159</span>)</span></span>;</span><br><span class="line">或</span><br><span class="line">constdouble pi =<span class="number">3.14159</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>10. const_cast 用法：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">const_cast</span>&lt;type_id&gt;(expression)</span><br></pre></td></tr></table></figure>
+
+<p>该运算符用来修改类型的 const 或 volatile 属性。除了 const 或 volatile 修饰之外， type_id 和 expression 的类型是一样的。常量指针被转化成非常量指针，并且仍然指向原来的对象；常量引用被转换成非常量引用，并且仍然指向原来的对象；常量对象被转换成非常量对象。</p>
+<p><strong>11. continue</strong></p>
+<p>continue（继续）关键字用于循环结构。它使程序跳过代码段后部的部分，与 break 不同的是，continue 不是进入代码段后的部分执行，而是重新开始新的循环。因而它是”继续循环”之意，不是 break（跳出）。</p>
+<p><strong>12. default</strong></p>
+<p>default（默认、缺省）用于 switch 语句。当 switch 所有的 case 都不满足时，将进入 default 执行。default 只能放在 switch 语句所有的 case 之后，并且是可选的。</p>
+<p><strong>13. delete</strong></p>
+<p>delete（删除）释放程序动态申请的内存空间。delete 后面通常是一个指针或者数组 []，并且只能 delete 通过 new 关键字申请的指针，否则会发生段错误。</p>
+<p><strong>14. do</strong></p>
+<p>do-while 是一类循环结构。与 while 循环不同，do-while 循环保证至少要进入循环体一次。</p>
+<p><strong>15. double</strong></p>
+<p>double（双精度）类型，C++ 中的基本数据结构，以双精度形式存储一个浮点数。</p>
+<p><strong>16. dynamic_cast</strong></p>
+<p>dynamic_cast（动态转换），允许在运行时刻进行类型转换，从而使程序能够在一个类层次结构安全地转换类型。dynamic_cast 提供了两种转换方式，把基类指针转换成派生类指针，或者把指向基类的左值转换成派生类的引用。</p>
+<p><strong>17. else</strong></p>
+<p>else 紧跟在 if 后面，用于对 if 不成立的情况的选择。</p>
+<p><strong>18. enum</strong></p>
+<p>enum（枚举）类型，给出一系列固定的值，只能在这里面进行选择一个。</p>
+<p><strong>19. explicit</strong></p>
+<p>explicit（显式的）的作用是”禁止单参数构造函数”被用于自动型别转换，其中比较典型的例子就是容器类型。在这种类型的构造函数中你可以将初始长度作为参数传递给构造函数。</p>
+<p><strong>20. export</strong></p>
+<p>为了访问其他编译单元（如另一代码文件）中的变量或对象，对普通类型（包括基本数据类、结构和类），可以利用关键字 extern，来使用这些变量或对象时；但是对模板类型，则必须在定义这些模板类对象和模板函数时，使用标准 C++ 新增加的关键字 export（导出）。</p>
+<p><strong>21. extern</strong></p>
+<p>extern（外部的）声明变量或函数为外部链接，即该变量或函数名在其它文件中可见。被其修饰的变量（外部变量）是静态分配空间的，即程序开始时分配，结束时释放。用其声明的变量或函数应该在别的文件或同一文件的其它地方定义（实现）。在文件内声明一个变量或函数默认为可被外部使用。在 C++ 中，还可用来指定使用另一语言进行链接，这时需要与特定的转换符一起使用。目前仅支持 <strong>C</strong> 转换标记，来支持 C 编译器链接。使用这种情况有两种形式：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">extern</span><span class="string">&quot;C&quot;</span>声明语句</span><br><span class="line"></span><br><span class="line"><span class="keyword">extern</span><span class="string">&quot;C&quot;</span>&#123;声明语句块&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>22. false</strong></p>
+<p>false（假的），C++ 的基本数据结构 bool 类型的值之一。等同于 int 的 0 值。</p>
+<p><strong>23. float</strong></p>
+<p>float（浮点数），C++ 中的基本数据结构，精度小于 double。</p>
+<p><strong>24. for</strong></p>
+<p>for 是 C++ 中的循环结构之一。</p>
+<p><strong>25. friend</strong></p>
+<p>friend（友元）声明友元关系。友元可以访问与其有 friend 关系的类中的 private/protected 成员，通过友元直接访问类中的 private/protected 成员的主要目的是提高效率。友元包括友元函数和友元类。</p>
+<p><strong>26. goto</strong></p>
+<p>goto（转到），用于无条件跳转到某一标号处开始执行。</p>
+<p><strong>27. if</strong></p>
+<p>if（如果），C++ 中的条件语句之一，可以根据后面的 bool 类型的值选择进入一个分支执行。</p>
+<p><strong>28. inline</strong></p>
+<p>inline（内联）函数的定义将在编译时在调用处展开。inline 函数一般由短小的语句组成，可以提高程序效率。</p>
+<p><strong>29. int</strong></p>
+<p>int（整型，integer），C++ 中的基本数据结构，用于表示整数，精度小于 long。</p>
+<p><strong>30. long</strong></p>
+<p>long（长整型，long integer），C++ 中的基本数据结构，用于表示长整数。</p>
+<p><strong>31. mutable</strong></p>
+<p>mutable（易变的）是 C++ 中一个不常用的关键字。只能用于类的非静态和非常量数据成员。由于一个对象的状态由该对象的非静态数据成员决定，所以随着数据成员的改变，对像的状态也会随之发生变化。如果一个类的成员函数被声明为 const 类型，表示该函数不会改变对象的状态，也就是该函数不会修改类的非静态数据成员。但是有些时候需要在该类函数中对类的数据成员进行赋值，这个时候就需要用到 mutable 关键字。</p>
+<p><strong>32. namespace</strong></p>
+<p>namespace（命名空间）用于在逻辑上组织类，是一种比类大的结构。</p>
+<p><strong>33. new</strong></p>
+<p>new（新建）用于新建一个对象。new 运算符总是返回一个指针。由 new 创建</p>
+<p><strong>34. operator</strong></p>
+<p>operator（操作符）用于操作符重载。这是 C++ 中的一种特殊的函数。</p>
+<p><strong>35. private</strong></p>
+<p>private（私有的），C++ 中的访问控制符。被标明为 private 的字段只能在本类以及友元中访问。</p>
+<p><strong>36. protected</strong></p>
+<p>protected（受保护的），C++ 中的访问控制符。被标明为 protected 的字段只能在本类以及其继承类和友元中访问。</p>
+<p><strong>37. public</strong></p>
+<p>public（公有的），C++ 中的访问控制符。被标明为 public 的字段可以在任何类中访问</p>
+<p><strong>38. register</strong></p>
+<p>register（寄存器）声明的变量称着寄存器变量，在可能的情况下会直接存放在机器的寄存器中；但对 32 位编译器不起作用，当 global optimizations（全局优化）开的时候，它会做出选择是否放在自己的寄存器中；不过其它与 register 关键字有关的其它符号都对 32 位编译器有效。</p>
+<p><strong>39. reinterpret_cast</strong></p>
+<p>用法：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">reinpreter_cast</span>&lt;type-id&gt;(expression)</span><br></pre></td></tr></table></figure>
+
+<p>type-id 必须是一个指针、引用、算术类型、函数指针或者成员指针。它可以把一个指针转换成一个整数，也可以把一个整数转换成一个指针（先把一个指针转换成一个整数，在把该整数转换成原类型的指针，还可以得到原先的指针值）。</p>
+<p><strong>40. return</strong></p>
+<p>return（返回）用于在函数中返回值。程序在执行到 return 语句后立即返回，return 后面的语句无法执行到。</p>
+<p><strong>41. short</strong></p>
+<p>short（短整型，short integer），C++ 中的基本数据结构，用于表示整数，精度小于 int。</p>
+<p><strong>42. signed</strong></p>
+<p>signed（有符号），表明该类型是有符号数，和 unsigned 相反。数字类型（整型和浮点型）都可以用 signed 修饰。但默认就是 signed，所以一般不会显式使用。</p>
+<p><strong>43. sizeof</strong></p>
+<p>由于 C++ 每种类型的大小都是由编译器自行决定的，为了增加可移植性，可以用 sizeof 运算符获得该数据类型占用的字节数。</p>
+<p><strong>44. static</strong></p>
+<p>static（静态的）静态变量作用范围在一个文件内，程序开始时分配空间，结束时释放空间，默认初始化为 0，使用时可改变其值。静态变量或静态函数，只有本文件内的代码才可访问它，它的名字（变量名或函数名）在其它文件中不可见。因此也称为”文件作用域”。在 C++ 类的成员变量被声明为 static（称为静态成员变量），意味着它被该类的所有实例所共享，也就是说当某个类的实例修改了该静态成员变量，其修改值为该类的其它所有实例所见；而类的静态成员函数也只能访问静态成员（变量或函数）。类的静态成员变量必须在声明它的文件范围内进行初始化才能使用，private 类型的也不例外。</p>
+<p><strong>45. static_cast</strong></p>
+<p>用法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">static_cast&lt; type-id &gt;( expression )</span><br></pre></td></tr></table></figure>
+
+<p>该运算符把 expression 转换为 type-id 类型，但没有运行时类型检查来保证转换的安全性。它主要有如下几种用法：</p>
+<ul>
+<li>① 用于类层次结构中基类和子类之间指针或引用的转换。进行上行转换（把子类的指针或引用转换成基类表示）是安全的；进行下行转换（把基类指针或引用转换成子类表示）时，由于没有动态类型检查，所以是不安全的。</li>
+<li>② 用于基本数据类型之间的转换，如把 int 转换成 char，把 int 转换成 enum。这种转换的安全性也要开发人员来保证。</li>
+<li>③ 把空指针转换成目标类型的空指针。</li>
+<li>④ 把任何类型的表达式转换成 void 类?</li>
+</ul>
+<p><strong>注意</strong> static_cast 不能转换掉 expression 的 const、volitale、或者 __unaligned 属性。</p>
+<p><strong>46. struct</strong></p>
+<p>struct（结构）类型，类似于 class 关键字，与 C 语言兼容（class 关键字是不与 C 语言兼容的），可以实现面向对象程序设计。</p>
+<p><strong>47. switch</strong></p>
+<p>switch（转换）类似于 if-else-if 语句，是一种多分枝语句。它提供了一种简洁的书写，并且能够生成效率更好的代码。但是，switch 后面的判断只能是 int（char 也可以，但 char 本质上也是一种 int 类型）。switch 语句最后的 default 分支是可选的。</p>
+<p><strong>48. template</strong></p>
+<p>template（模板），C++ 中泛型机制的实现。</p>
+<p><strong>49. this</strong></p>
+<p>this 返回调用者本身的指针。</p>
+<p><strong>50. throw</strong></p>
+<p>throw（抛出）用于实现 C++ 的异常处理机制，可以通过 throw 关键字”抛出”一个异常。</p>
+<p><strong>51. true</strong></p>
+<p>true（真的），C++ 的基本数据结构 bool 类型的值之一。等同于 int 的非 0 值。</p>
+<p><strong>52. try</strong></p>
+<p>try（尝试）用于实现 C++ 的异常处理机制。可以在 try 中调用可能抛出异常的函数，然后在 try 后面的 catch 中捕获并进行处理。</p>
+<p><strong>53. typedef</strong></p>
+<p>typedef（类型定义，type define），其格式为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">typedef类型定义名;</span><br></pre></td></tr></table></figure>
+
+<p>类型说明定义了一个数据类型的新名字而不是定义一种新的数据类型。定义名表示这个类型的新名字。</p>
+<p><strong>54. typeid</strong></p>
+<p>指出指针或引用指向的对象的实际派生类型。</p>
+<p><strong>55. typename</strong></p>
+<p>typename（类型名字）关键字告诉编译器把一个特殊的名字解释成一个类型。在下列情况下必须对一个 name 使用 typename 关键字：</p>
+<ul>
+<li>1． 一个唯一的 name（可以作为类型理解），它嵌套在另一个类型中的。</li>
+<li>2． 依赖于一个模板参数，就是说：模板参数在某种程度上包含这个 name。当模板参数使编译器在指认一个类型时产生了误解。</li>
+</ul>
+<p><strong>56. union</strong></p>
+<p>union（联合），类似于 enum。不同的是 enum 实质上是 int 类型的，而 union 可以用于所有类型，并且其占用空间是随着实际类型大小变化的。</p>
+<p><strong>57. unsigned</strong></p>
+<p>unsigned（无符号），表明该类型是无符号数，和 signed 相反。</p>
+<p><strong>58. using</strong></p>
+<p>表明使用 namespace。</p>
+<p><strong>59. virtual</strong></p>
+<p>virtual（虚的），C++ 中用来实现多态机制。</p>
+<p><strong>60. void</strong></p>
+<p>void（空的），可以作为函数返回值，表明不返回任何数据；可以作为参数，表明没有参数传入（C++中不是必须的）；可以作为指针使用。</p>
+<p><strong>61. volatile</strong></p>
+<p>volatile（不稳定的）限定一个对象可被外部进程（操作系统、硬件或并发线程等）改变，声明时的语法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">intvolatile nVint;</span><br></pre></td></tr></table></figure>
+
+<p>这样的声明是不能达到最高效的，因为它们的值随时会改变，系统在需要时会经常读写这个对象的值。因此常用于像中断处理程序之类的异步进程进行内存单元访问。</p>
+<p><strong>62. wchar_t</strong></p>
+<p>wchar_t 是宽字符类型，每个 wchar_t 类型占 2 个字节，16 位宽。汉字的表示就要用到 wchar_t。</p>
+]]></content>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Node.js 安装</title>
+    <url>/2023/07/17/Node-js-%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><h3 id="添加软件源"><a href="#添加软件源" class="headerlink" title="添加软件源"></a>添加软件源</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -sL https://deb.nodesource.com/setup_&lt;VERSION&gt;.x | sudo -E bash -</span><br></pre></td></tr></table></figure>
+
+<p>其中 VERSION 指定版本号</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 匿名函数</title>
+    <url>/2023/07/12/Python-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>在 Python 中，匿名函数是一种不使用 <code>def</code>关键字命名的函数，也被称为”lambda”函数。匿名函数通常用于需要一个简单函数的地方，而不需要定义一个完整的命名函数。</p>
+<p>匿名函数的语法如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">lambda</span> arguments: expression</span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>lambda</code>是关键字，<code>arguments</code> 是函数的参数（可以是多个参数），<code>expression</code> 是函数的返回值表达式。</p>
+<p>匿名函数可以接收任意数量的参数，但只能返回一个表达式的结果。它们在很多情况下都很有用，例如在排序、映射或过滤数据时使用。</p>
+<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ol>
+<li>简洁性：匿名函数可以用更简洁的语法定义，省去了使用 <code>def</code> 关键字和函数名称的步骤。对于只需进行简单计算或执行简单操作的函数，使用匿名函数可以减少代码的冗余。</li>
+<li>灵活性：由于匿名函数不需要命名，可以直接在需要的地方定义和使用。这使得匿名函数特别适用于一次性、临时或仅在特定上下文中使用的函数。</li>
+<li>函数作为参数：匿名函数常用于接受函数作为参数的高阶函数中。通过匿名函数，可以轻松地在需要时定义和传递简单的功能逻辑，而不必事先定义一个完整的命名函数。</li>
+<li>代码简洁性和可读性：对于一些简单的函数逻辑，使用匿名函数可以使代码更加紧凑和易读。当函数逻辑简单明了时，将其定义为匿名函数可以提高代码的可读性，并使代码更加清晰和易于理解。</li>
+</ol>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="求平方值"><a href="#求平方值" class="headerlink" title="求平方值"></a>求平方值</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">square = <span class="keyword">lambda</span> x: x ** <span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(square(<span class="number">5</span>))  <span class="comment"># 输出: 25</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="求两个数的和"><a href="#求两个数的和" class="headerlink" title="求两个数的和"></a>求两个数的和</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">add = <span class="keyword">lambda</span> x, y: x + y</span><br><span class="line"><span class="built_in">print</span>(add(<span class="number">3</span>, <span class="number">4</span>))  <span class="comment"># 输出: 7</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="对列表进行排序"><a href="#对列表进行排序" class="headerlink" title="对列表进行排序"></a>对列表进行排序</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">5</span>, <span class="number">2</span>, <span class="number">8</span>, <span class="number">1</span>, <span class="number">6</span>]</span><br><span class="line">sorted_numbers = <span class="built_in">sorted</span>(numbers, key=<span class="keyword">lambda</span> x: x % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line"><span class="built_in">print</span>(sorted_numbers)  <span class="comment"># 输出: [5, 1, 2, 8, 6]</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 2 和 3 区别</title>
+    <url>/2023/07/12/Python-2-%E5%92%8C-3-%E5%8C%BA%E5%88%AB/</url>
+    <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ol>
+<li>语法差异：Python 3 引入了一些语法改进，使得代码更加简洁和可读。例如，Python 3 中的 <code>print</code> 函数成为了一个内置函数，而不再是一个语句；字符串使用 Unicode 编码，而不再默认使用 ASCII 编码。</li>
+<li>print 函数：在 Python 2 中，<code>print</code> 是一个语句，而在 Python 3 中，<code>print()</code> 是一个内置函数，需要使用括号包裹打印内容。</li>
+<li>整数除法：在 Python 2 中，整数除法会向下取整，即两个整数相除得到的结果仍然是整数；而在 Python 3 中，整数除法会得到浮点数结果。</li>
+<li>Unicode：在 Python 2 中，字符串默认使用 ASCII 编码，而在 Python 3 中，字符串默认使用 Unicode 编码，以支持更广泛的字符集。</li>
+<li>xrange 函数：在 Python 2 中，<code>xrange()</code> 函数用于生成一个迭代器对象，用于循环迭代。而在 Python 3 中，这个函数被移除，<code>range()</code> 函数返回一个可迭代对象。</li>
+<li>异常捕获语法：在 Python 2 中，<code>except</code> 语句使用逗号分隔多个异常类型，而在 Python 3 中，使用 <code>as</code> 关键字将异常类型与异常实例绑定。</li>
+<li>模块命名：在 Python 2 中，一些模块的命名使用了不同的命名约定，例如 <code>urllib</code> 和 <code>urllib2</code>。而在 Python 3 中，这些模块被合并为一个单一的模块 <code>urllib</code>。</li>
+<li>字符串和字节类型：在 Python 2 中，字符串分为普通字符串（str）和 Unicode 字符串（unicode）两种类型，而在 Python 3 中，字符串只有一种类型，即 Unicode 字符串。为了表示字节数据，引入了字节字符串（bytes）类型。</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 字符串反转</title>
+    <url>/2023/07/12/Python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%8D%E8%BD%AC/</url>
+    <content><![CDATA[<h2 id="切片操作："><a href="#切片操作：" class="headerlink" title="切片操作："></a>切片操作：</h2><p>可以使用切片操作来反转字符串。通过指定步长为-1，可以将字符串按相反的顺序提取出来。</p>
+<p>示例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s = <span class="string">&quot;Hello, World!&quot;</span></span><br><span class="line">reversed_s = s[::-<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(reversed_s)</span><br><span class="line"><span class="comment"># 输出: &quot;!dlroW ,olleH&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用-reversed-函数和-join-方法："><a href="#使用-reversed-函数和-join-方法：" class="headerlink" title="使用 reversed() 函数和 join() 方法："></a>使用 reversed() 函数和 join() 方法：</h2><p>可以使用 <code>reversed()</code> 函数将字符串转换为一个反转的迭代器对象，然后使用 <code>join()</code> 方法将迭代器中的字符连接成一个新的字符串。</p>
+<p>示例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s = <span class="string">&quot;Hello, World!&quot;</span></span><br><span class="line">reversed_s = <span class="string">&#x27;&#x27;</span>.join(<span class="built_in">reversed</span>(s))</span><br><span class="line"><span class="built_in">print</span>(reversed_s)</span><br><span class="line"><span class="comment"># 输出: &quot;!dlroW ,olleH&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用循环逐个字符反转："><a href="#使用循环逐个字符反转：" class="headerlink" title="使用循环逐个字符反转："></a>使用循环逐个字符反转：</h2><p>通过循环遍历字符串，从最后一个字符开始逐个提取字符，并将其连接成一个新的字符串。</p>
+<p>示例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s = <span class="string">&quot;Hello, World!&quot;</span></span><br><span class="line">reversed_s = <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">for</span> char <span class="keyword">in</span> s:</span><br><span class="line">    reversed_s = char + reversed_s</span><br><span class="line"><span class="built_in">print</span>(reversed_s)</span><br><span class="line"><span class="comment"># 输出: &quot;!dlroW ,olleH&quot;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 字符串前缀</title>
+    <url>/2023/07/11/Python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%89%8D%E7%BC%80/</url>
+    <content><![CDATA[<h2 id="r-R"><a href="#r-R" class="headerlink" title="r/R"></a>r/R</h2><p>表示 raw string（原始字符串），在普通字符串中，反斜线是转义符，代表一些特殊的内容，如换行符\n，前缀 r 表示该字符串是原始字符串，即\不是转义符，只是单纯的一个符号。常用于特殊的字符如换行符、正则表达式、文件路径。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">str1 = <span class="string">&quot;Hello\nWorld&quot;</span></span><br><span class="line">str2 = <span class="string">r&quot;Hello \n World&quot;</span></span><br><span class="line"><span class="built_in">print</span>(str1)</span><br><span class="line"><span class="built_in">print</span>(str2)</span><br><span class="line"><span class="comment"># 打印结果如下：</span></span><br><span class="line">Hello</span><br><span class="line">World</span><br><span class="line">Hello \n World</span><br></pre></td></tr></table></figure>
+
+<h2 id="u-U"><a href="#u-U" class="headerlink" title="u/U"></a>u/U</h2><p>表示 unicode string（unicode 编码字符串），表明该字符串是 unicode 编码，Python2 中用，用在含有中文字符的字符串前，防止因为编码问题，导致中文出现乱码。另外一般要在文件开关标明编码方式采用 utf8。Python3 中，所有字符串默认都是 unicode 字符串。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">str1 = <span class="string">&#x27;\u4f60\u597d\u4e16\u754c&#x27;</span></span><br><span class="line">str2 = <span class="string">u&#x27;\u4f60\u597d\u4e16\u754c&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(str1)</span><br><span class="line"><span class="built_in">print</span>(str2)</span><br><span class="line"><span class="comment"># 打印结果如下：</span></span><br><span class="line">你好世界</span><br><span class="line">你好世界</span><br></pre></td></tr></table></figure>
+
+<h2 id="b-B"><a href="#b-B" class="headerlink" title="b/B"></a>b/B</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">str1 = <span class="string">&#x27;hello world&#x27;</span></span><br><span class="line">str2 = <span class="string">b&#x27;hello world&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(str1))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(str2))</span><br><span class="line"><span class="comment"># 打印结果如下：</span></span><br><span class="line">&lt;<span class="keyword">class</span> <span class="string">&#x27;str&#x27;</span>&gt;</span><br><span class="line">&lt;<span class="keyword">class</span> <span class="string">&#x27;bytes&#x27;</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>表示 byte string（转换成 bytes 类型），常用在如网络编程中，服务器和浏览器只认 bytes 类型数据。如：send 函数的参数和 recv 函数的返回值都是 bytes 类型。</p>
+<h2 id="f-F"><a href="#f-F" class="headerlink" title="f/F"></a>f/F</h2><p>表示 format string（格式化字符串），比 format 方法可读性高且使用方便。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name = <span class="string">&quot;张三&quot;</span></span><br><span class="line">age = <span class="number">20</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;我叫<span class="subst">&#123;name&#125;</span>,今年<span class="subst">&#123;age&#125;</span>岁。&quot;</span>)</span><br><span class="line"><span class="comment"># 打印结果如下：</span></span><br><span class="line">我叫张三,今年<span class="number">20</span>岁。</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 数据类型</title>
+    <url>/2023/07/12/Python-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<h2 id="数字类型"><a href="#数字类型" class="headerlink" title="数字类型"></a>数字类型</h2><ul>
+<li>整数（int）：表示整数值，如 1、-5、100。</li>
+<li>浮点数（float）：表示带有小数部分的数字，如 3.14、-2.5。</li>
+<li>复数（complex）：表示实部和虚部的复数，如 2+3j、-1+2j。</li>
+</ul>
+<h2 id="字符串类型（str）"><a href="#字符串类型（str）" class="headerlink" title="字符串类型（str）"></a>字符串类型（str）</h2><p>用于表示文本数据，可以包含字母、数字和符号等字符。字符串以单引号（’）或双引号（”）括起来，如’Hello’、”Python”。</p>
+<h2 id="布尔类型（bool）"><a href="#布尔类型（bool）" class="headerlink" title="布尔类型（bool）"></a>布尔类型（bool）</h2><p>表示真（True）或假（False）的值。用于条件判断和逻辑运算。</p>
+<h2 id="列表类型（list）"><a href="#列表类型（list）" class="headerlink" title="列表类型（list）"></a>列表类型（list）</h2><p>有序的可变容器，可以存储多个元素。列表使用方括号（[]）表示，元素之间使用逗号（,）分隔，如[1, 2, 3]。</p>
+<h2 id="元组类型（tuple）"><a href="#元组类型（tuple）" class="headerlink" title="元组类型（tuple）"></a>元组类型（tuple）</h2><p>有序的不可变容器，类似于列表，但元素不可修改。元组使用圆括号（()）表示，元素之间使用逗号（,）分隔，如(1, 2, 3)。</p>
+<h2 id="集合类型（set）"><a href="#集合类型（set）" class="headerlink" title="集合类型（set）"></a>集合类型（set）</h2><p>无序的可变容器，存储唯一的元素，不包含重复项。集合使用花括号（{}）表示，元素之间使用逗号（,）分隔，如{1, 2, 3}。</p>
+<h2 id="字典类型（dict）"><a href="#字典类型（dict）" class="headerlink" title="字典类型（dict）"></a>字典类型（dict）</h2><p>无序的可变容器，存储键值对。字典使用花括号（{}）表示，每个键值对使用冒号（:）分隔，键值对之间使用逗号（,）分隔，如{‘name’: ‘John’, ‘age’: 25}。</p>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 标准库</title>
+    <url>/2023/07/12/Python-%E6%A0%87%E5%87%86%E5%BA%93/</url>
+    <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ol>
+<li><code>os</code>：提供与操作系统交互的功能，包括文件和目录操作、进程管理等。</li>
+<li><code>sys</code>：提供与 Python 解释器和系统相关的功能，如命令行参数、退出程序等。</li>
+<li><code>math</code>：提供数学运算相关的函数，如三角函数、指数对数、数值运算等。</li>
+<li><code>datetime</code>：提供日期和时间的处理功能，包括日期时间的表示和计算、格式化和解析等。</li>
+<li><code>random</code>：提供生成随机数的功能。</li>
+<li><code>json</code>：提供 JSON（JavaScript Object Notation）的编码和解码功能。</li>
+<li><code>socket</code>：提供网络编程的功能，包括套接字操作、网络通信等。</li>
+<li><code>re</code>：提供正则表达式的支持，用于模式匹配和文本处理。</li>
+<li><code>csv</code>：提供 CSV（Comma-Separated Values）格式文件的读写功能。</li>
+<li><code>sqlite3</code>：提供 SQLite 数据库的接口，用于在 Python 中操作 SQLite 数据库。</li>
+<li><code>unittest</code>：提供单元测试框架，用于编写和运行测试用例。</li>
+<li><code>logging</code>：提供灵活的日志记录功能，用于在应用程序中进行日志记录</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>snap 教程</title>
+    <url>/2023/07/17/snap-%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">snap list（本linux系统上所有snap安装的包）</span><br><span class="line"></span><br><span class="line">snap run &lt;PACKAGE&gt;</span><br><span class="line"></span><br><span class="line">snap find &lt;PACKAGE&gt;</span><br><span class="line"></span><br><span class="line">snap install &lt;PACKAGE&gt;</span><br><span class="line"></span><br><span class="line">snap refresh &lt;PACKAGE&gt;</span><br><span class="line"></span><br><span class="line">snap refresh all</span><br><span class="line"></span><br><span class="line">snap revert &lt;PACKAGE&gt;</span><br><span class="line"></span><br><span class="line">snap remove &lt;PACKAGE&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="服务管理"><a href="#服务管理" class="headerlink" title="服务管理"></a>服务管理</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo systemctl unmask snapd.service</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo systemctl enable snapd.service</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo systemctl start snapd.service</span><br></pre></td></tr></table></figure>
+
+<h2 id="错误检查"><a href="#错误检查" class="headerlink" title="错误检查"></a>错误检查</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">snap debug sandbox-features</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>安装中文输入法</title>
+    <url>/2023/07/17/%E5%AE%89%E8%A3%85%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo aptitude install fcitx5</span><br><span class="line">sudo aptitude install fcitx5-pinyin</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><img src="/img/截图 2023-07-18 06-51-56.png">
+<img src="/img/截图 2023-07-18 07-09-53.png">
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 解释器</title>
+    <url>/2023/07/13/Python-%E8%A7%A3%E9%87%8A%E5%99%A8/</url>
+    <content><![CDATA[<h2 id="CPython"><a href="#CPython" class="headerlink" title="CPython"></a>CPython</h2><p>c 语言开发的解释器，使用最广</p>
+<h2 id="IPython"><a href="#IPython" class="headerlink" title="IPython"></a>IPython</h2><p>基于 CPython 之上的交互解释器，交互方式增强，功能和 CPython 一样</p>
+<h2 id="PyPy"><a href="#PyPy" class="headerlink" title="PyPy"></a>PyPy</h2><p>目标是执行效率，采用 JIT 技术对 Python 进行动态编译，提高执行效率</p>
+<h2 id="JPython"><a href="#JPython" class="headerlink" title="JPython"></a>JPython</h2><p>运行在 Java 上的解释器，直接把 Python 代码编译成 Java 字节码进行解释</p>
+<h2 id="IronPython"><a href="#IronPython" class="headerlink" title="IronPython"></a>IronPython</h2><p>微软的 Python 解释器</p>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python 变量作用域</title>
+    <url>/2023/07/11/python-%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
+    <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Python 语言有四种作用域，如下表所示，变量调用顺序遵循就近原则，即 ‘LEGB’ 原则</p>
+<table>
+<thead>
+<tr>
+<th>作用域</th>
+<th>英文</th>
+<th>简写</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>局部作用域</td>
+<td>Local</td>
+<td>L</td>
+</tr>
+<tr>
+<td>嵌套作用域</td>
+<td>Enclosed</td>
+<td>E</td>
+</tr>
+<tr>
+<td>全局作用域</td>
+<td>Global</td>
+<td>G</td>
+</tr>
+<tr>
+<td>内置作用域</td>
+<td>Built-in</td>
+<td>B</td>
+</tr>
+</tbody></table>
+<h2 id="局部作用域"><a href="#局部作用域" class="headerlink" title="局部作用域"></a>局部作用域</h2><p>局部作用域是在函数或代码块内部定义的作用域。在局部作用域中定义的变量只能在函数或代码块内部访问。当函数执行结束或代码块执行完毕后，局部作用域中的变量将会被销毁。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">my_function</span>():</span><br><span class="line">    local_var = <span class="number">20</span>  <span class="comment"># 局部作用域</span></span><br><span class="line">    <span class="built_in">print</span>(local_var)</span><br><span class="line"></span><br><span class="line">my_function()  <span class="comment"># 输出: 20</span></span><br><span class="line"><span class="built_in">print</span>(local_var)  <span class="comment"># 报错，局部变量在函数外部不可访问</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="嵌套作用域"><a href="#嵌套作用域" class="headerlink" title="嵌套作用域"></a>嵌套作用域</h2><p>嵌套作用域是指在一个函数内部定义另一个函数时形成的作用域。在嵌套作用域中，内部函数可以访问外部函数的变量，但外部函数不能访问内部函数的变量。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">outer_function</span>():</span><br><span class="line">    outer_var = <span class="number">30</span>  <span class="comment"># 外部函数作用域</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner_function</span>():</span><br><span class="line">        <span class="built_in">print</span>(outer_var)  <span class="comment"># 在内部函数中访问外部函数变量</span></span><br><span class="line"></span><br><span class="line">    inner_function()</span><br><span class="line"></span><br><span class="line">outer_function()  <span class="comment"># 输出: 30</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="全局作用域"><a href="#全局作用域" class="headerlink" title="全局作用域"></a>全局作用域</h2><p>全局作用域是在整个程序中都可见的作用域。在全局作用域中定义的变量可以在程序的任何地方被访问。可以在程序的最外层定义全局变量，也可以使用 <code>global</code> 关键字在函数内部声明全局变量。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">global_var = <span class="number">10</span>  <span class="comment"># 全局作用域</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">my_function</span>():</span><br><span class="line">    <span class="built_in">print</span>(global_var)  <span class="comment"># 在函数内部访问全局变量</span></span><br><span class="line"></span><br><span class="line">my_function()  <span class="comment"># 输出: 10</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="内置作用域"><a href="#内置作用域" class="headerlink" title="内置作用域"></a>内置作用域</h2><p>内置作用域（Built-in），它包含了 Python 解释器内置的函数和变量。内置作用域中的函数和变量可以直接在程序中使用，无需导入任何模块。一些常见的内置函数包括 <code>print()</code>、<code>len()</code>、<code>input()</code> 等，而内置变量例如 <code>True</code>、<code>False</code>、<code>None</code> 等也属于内置作用域。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(<span class="string">&quot;Hello&quot;</span>))  <span class="comment"># 使用内置函数print()和len()</span></span><br><span class="line"><span class="comment"># 输出: 5</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="literal">True</span>:  <span class="comment"># 使用内置变量True</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;True&quot;</span>)</span><br><span class="line"><span class="comment"># 输出: True</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>运行特定文件</title>
+    <url>/2023/07/17/%E8%BF%90%E8%A1%8C%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h2 id="AppImage"><a href="#AppImage" class="headerlink" title="AppImage"></a>AppImage</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 0600 *.AppImage</span><br></pre></td></tr></table></figure>
+
+<h2 id="run"><a href="#run" class="headerlink" title="run"></a>run</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 0700 *.run</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Liunx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux 设置英文文件路径</title>
+    <url>/2023/07/18/Linux-%E8%AE%BE%E7%BD%AE%E8%8B%B1%E6%96%87%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84/</url>
+    <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>执行以下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo vim ~/.config/user-dirs.dirs</span><br></pre></td></tr></table></figure>
+
+<p>将下面内容</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">XDG_DESKTOP_DIR=&quot;$HOME/桌面&quot;</span><br><span class="line"></span><br><span class="line">XDG_DOWNLOAD_DIR=&quot;$HOME/下载&quot;</span><br><span class="line"></span><br><span class="line">XDG_TEMPLATES_DIR=&quot;$HOME/模板&quot;</span><br><span class="line"></span><br><span class="line">XDG_PUBLICSHARE_DIR=&quot;$HOME/公共&quot;</span><br><span class="line"></span><br><span class="line">XDG_DOCUMENTS_DIR=&quot;$HOME/文档&quot;</span><br><span class="line"></span><br><span class="line">XDG_MUSIC_DIR=&quot;$HOME/音乐&quot;</span><br><span class="line"></span><br><span class="line">XDG_PICTURES_DIR=&quot;$HOME/图片&quot;</span><br><span class="line"></span><br><span class="line">XDG_VIDEOS_DIR=&quot;$HOME/视频&quot;</span><br></pre></td></tr></table></figure>
+
+<p>进行修改，修改为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">XDG_DESKTOP_DIR=&quot;$HOME/Desktop&quot;</span><br><span class="line"></span><br><span class="line">XDG_DOWNLOAD_DIR=&quot;$HOME/Downloads&quot;</span><br><span class="line"></span><br><span class="line">XDG_TEMPLATES_DIR=&quot;$HOME/Templates&quot;</span><br><span class="line"></span><br><span class="line">XDG_PUBLICSHARE_DIR=&quot;$HOME/Public&quot;</span><br><span class="line"></span><br><span class="line">XDG_DOCUMENTS_DIR=&quot;$HOME/Documents&quot;</span><br><span class="line"></span><br><span class="line">XDG_MUSIC_DIR=&quot;$HOME/Music&quot;</span><br><span class="line"></span><br><span class="line">XDG_PICTURES_DIR=&quot;$HOME/Pictures&quot;</span><br><span class="line"></span><br><span class="line">XDG_VIDEOS_DIR=&quot;$HOME/Videos&quot;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决 Electron 安装问题</title>
+    <url>/2023/07/18/%E8%A7%A3%E5%86%B3-Electron-%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> electron_mirror <span class="string">&quot;https://npm.taobao.org/mirrors/electron/&quot;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
 </search>

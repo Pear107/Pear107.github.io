@@ -6,7 +6,7 @@
   <link href="http://yearr107.top/atom.xml" rel="self"/>
   
   <link href="http://yearr107.top/"/>
-  <updated>2023-07-07T09:16:59.239Z</updated>
+  <updated>2023-07-18T01:19:48.708Z</updated>
   <id>http://yearr107.top/</id>
   
   <author>
@@ -15,6 +15,356 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决 Electron 安装问题</title>
+    <link href="http://yearr107.top/2023/07/18/%E8%A7%A3%E5%86%B3-Electron-%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/"/>
+    <id>http://yearr107.top/2023/07/18/%E8%A7%A3%E5%86%B3-Electron-%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/</id>
+    <published>2023-07-18T01:09:25.000Z</published>
+    <updated>2023-07-18T01:19:48.708Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;方式一&quot;&gt;&lt;a href=&quot;#方式一&quot; class=&quot;headerlink&quot; title=&quot;方式一&quot;&gt;&lt;/a&gt;方式一&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+    <category term="前端" scheme="http://yearr107.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 设置英文文件路径</title>
+    <link href="http://yearr107.top/2023/07/18/Linux-%E8%AE%BE%E7%BD%AE%E8%8B%B1%E6%96%87%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84/"/>
+    <id>http://yearr107.top/2023/07/18/Linux-%E8%AE%BE%E7%BD%AE%E8%8B%B1%E6%96%87%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84/</id>
+    <published>2023-07-18T01:00:10.000Z</published>
+    <updated>2023-07-18T01:05:01.520Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;执行以下命令&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Linux" scheme="http://yearr107.top/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装中文输入法</title>
+    <link href="http://yearr107.top/2023/07/17/%E5%AE%89%E8%A3%85%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/"/>
+    <id>http://yearr107.top/2023/07/17/%E5%AE%89%E8%A3%85%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/</id>
+    <published>2023-07-17T14:35:40.000Z</published>
+    <updated>2023-07-17T23:22:22.072Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Linux" scheme="http://yearr107.top/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>运行特定文件</title>
+    <link href="http://yearr107.top/2023/07/17/%E8%BF%90%E8%A1%8C%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6/"/>
+    <id>http://yearr107.top/2023/07/17/%E8%BF%90%E8%A1%8C%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6/</id>
+    <published>2023-07-17T14:29:55.000Z</published>
+    <updated>2023-07-17T14:31:35.568Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;AppImage&quot;&gt;&lt;a href=&quot;#AppImage&quot; class=&quot;headerlink&quot; title=&quot;AppImage&quot;&gt;&lt;/a&gt;AppImage&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Liunx" scheme="http://yearr107.top/tags/Liunx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node.js 安装</title>
+    <link href="http://yearr107.top/2023/07/17/Node-js-%E5%AE%89%E8%A3%85/"/>
+    <id>http://yearr107.top/2023/07/17/Node-js-%E5%AE%89%E8%A3%85/</id>
+    <published>2023-07-17T14:23:37.000Z</published>
+    <updated>2023-07-17T14:30:29.904Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Linux&quot;&gt;&lt;a href=&quot;#Linux&quot; class=&quot;headerlink&quot; title=&quot;Linux&quot;&gt;&lt;/a&gt;Linux&lt;/h2&gt;&lt;h3 id=&quot;添加软件源&quot;&gt;&lt;a href=&quot;#添加软件源&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="前端" scheme="http://yearr107.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>snap 教程</title>
+    <link href="http://yearr107.top/2023/07/17/snap-%E6%95%99%E7%A8%8B/"/>
+    <id>http://yearr107.top/2023/07/17/snap-%E6%95%99%E7%A8%8B/</id>
+    <published>2023-07-17T14:18:17.000Z</published>
+    <updated>2023-07-17T23:01:27.396Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;h2 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Linux" scheme="http://yearr107.top/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++ 关键字</title>
+    <link href="http://yearr107.top/2023/07/13/C-%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+    <id>http://yearr107.top/2023/07/13/C-%E5%85%B3%E9%94%AE%E5%AD%97/</id>
+    <published>2023-07-13T12:07:17.000Z</published>
+    <updated>2023-07-13T12:48:23.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1. asm&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;asm (指令字符串)：允许在 C++</summary>
+        
+      
+    
+    
+    
+    
+    <category term="C++" scheme="http://yearr107.top/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 解释器</title>
+    <link href="http://yearr107.top/2023/07/13/Python-%E8%A7%A3%E9%87%8A%E5%99%A8/"/>
+    <id>http://yearr107.top/2023/07/13/Python-%E8%A7%A3%E9%87%8A%E5%99%A8/</id>
+    <published>2023-07-13T07:08:00.000Z</published>
+    <updated>2023-07-13T12:01:05.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;CPython&quot;&gt;&lt;a href=&quot;#CPython&quot; class=&quot;headerlink&quot; title=&quot;CPython&quot;&gt;&lt;/a&gt;CPython&lt;/h2&gt;&lt;p&gt;c 语言开发的解释器，使用最广&lt;/p&gt;
+&lt;h2 id=&quot;IPython&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Python" scheme="http://yearr107.top/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 数据类型</title>
+    <link href="http://yearr107.top/2023/07/12/Python-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://yearr107.top/2023/07/12/Python-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
+    <published>2023-07-12T13:30:47.000Z</published>
+    <updated>2023-07-13T12:42:53.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;数字类型&quot;&gt;&lt;a href=&quot;#数字类型&quot; class=&quot;headerlink&quot; title=&quot;数字类型&quot;&gt;&lt;/a&gt;数字类型&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;整数（int）：表示整数值，如</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Python" scheme="http://yearr107.top/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 2 和 3 区别</title>
+    <link href="http://yearr107.top/2023/07/12/Python-2-%E5%92%8C-3-%E5%8C%BA%E5%88%AB/"/>
+    <id>http://yearr107.top/2023/07/12/Python-2-%E5%92%8C-3-%E5%8C%BA%E5%88%AB/</id>
+    <published>2023-07-12T13:18:46.000Z</published>
+    <updated>2023-07-12T13:22:23.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;语法差异：Python 3 引入了一些语法改进，使得代码更加简洁和可读。例如，Python 3 中的</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Python" scheme="http://yearr107.top/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 标准库</title>
+    <link href="http://yearr107.top/2023/07/12/Python-%E6%A0%87%E5%87%86%E5%BA%93/"/>
+    <id>http://yearr107.top/2023/07/12/Python-%E6%A0%87%E5%87%86%E5%BA%93/</id>
+    <published>2023-07-12T13:11:49.000Z</published>
+    <updated>2023-07-12T13:12:53.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Python" scheme="http://yearr107.top/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 匿名函数</title>
+    <link href="http://yearr107.top/2023/07/12/Python-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/"/>
+    <id>http://yearr107.top/2023/07/12/Python-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/</id>
+    <published>2023-07-11T16:47:11.000Z</published>
+    <updated>2023-07-11T16:53:34.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;在 Python 中，匿名函数是一种不使用</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Python" scheme="http://yearr107.top/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 字符串反转</title>
+    <link href="http://yearr107.top/2023/07/12/Python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%8D%E8%BD%AC/"/>
+    <id>http://yearr107.top/2023/07/12/Python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%8D%E8%BD%AC/</id>
+    <published>2023-07-11T16:43:42.000Z</published>
+    <updated>2023-07-11T16:46:28.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;切片操作：&quot;&gt;&lt;a href=&quot;#切片操作：&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Python" scheme="http://yearr107.top/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python 变量作用域</title>
+    <link href="http://yearr107.top/2023/07/11/python-%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    <id>http://yearr107.top/2023/07/11/python-%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/</id>
+    <published>2023-07-11T07:03:33.000Z</published>
+    <updated>2023-07-11T16:43:22.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;Python 语言有四种作用域，如下表所示，变量调用顺序遵循就近原则，即 ‘LEGB’</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Python" scheme="http://yearr107.top/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 字符串前缀</title>
+    <link href="http://yearr107.top/2023/07/11/Python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%89%8D%E7%BC%80/"/>
+    <id>http://yearr107.top/2023/07/11/Python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%89%8D%E7%BC%80/</id>
+    <published>2023-07-11T06:41:23.000Z</published>
+    <updated>2023-07-11T07:45:59.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;r-R&quot;&gt;&lt;a href=&quot;#r-R&quot; class=&quot;headerlink&quot; title=&quot;r/R&quot;&gt;&lt;/a&gt;r/R&lt;/h2&gt;&lt;p&gt;表示 raw string（原始字符串），在普通字符串中，反斜线是转义符，代表一些特殊的内容，如换行符&#92;n，前缀 r</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Python" scheme="http://yearr107.top/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>SSH</title>
@@ -124,325 +474,6 @@
     
     
     <category term="前端" scheme="http://yearr107.top/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React 生命周期</title>
-    <link href="http://yearr107.top/2023/06/11/React-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
-    <id>http://yearr107.top/2023/06/11/React-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</id>
-    <published>2023-06-11T08:25:38.000Z</published>
-    <updated>2023-07-07T06:55:05.551Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;constructor-NaN&quot;&gt;&lt;a href=&quot;#constructor-NaN&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="前端" scheme="http://yearr107.top/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mat 和 Image 转换</title>
-    <link href="http://yearr107.top/2023/05/07/Mat-%E5%92%8C-Image-%E8%BD%AC%E6%8D%A2/"/>
-    <id>http://yearr107.top/2023/05/07/Mat-%E5%92%8C-Image-%E8%BD%AC%E6%8D%A2/</id>
-    <published>2023-05-07T06:42:16.000Z</published>
-    <updated>2023-07-07T06:55:05.551Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Image 转 Mat&lt;/p&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Go 代理修改</title>
-    <link href="http://yearr107.top/2023/04/26/Go-%E4%BB%A3%E7%90%86%E4%BF%AE%E6%94%B9/"/>
-    <id>http://yearr107.top/2023/04/26/Go-%E4%BB%A3%E7%90%86%E4%BF%AE%E6%94%B9/</id>
-    <published>2023-04-26T15:34:11.000Z</published>
-    <updated>2023-07-07T06:55:05.547Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    
-    <category term="C++" scheme="http://yearr107.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>字体大小单位</title>
-    <link href="http://yearr107.top/2023/04/25/%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E5%8D%95%E4%BD%8D/"/>
-    <id>http://yearr107.top/2023/04/25/%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E5%8D%95%E4%BD%8D/</id>
-    <published>2023-04-25T00:23:46.000Z</published>
-    <updated>2023-07-07T06:55:05.559Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;pt&quot;&gt;&lt;a href=&quot;#pt&quot; class=&quot;headerlink&quot; title=&quot;pt&quot;&gt;&lt;/a&gt;pt&lt;/h2&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;center&quot;&gt;PT号&lt;/th&gt;
-&lt;th</summary>
-        
-      
-    
-    
-    
-    
-    <category term="C++" scheme="http://yearr107.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python 配置文件</title>
-    <link href="http://yearr107.top/2023/04/24/Python-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/"/>
-    <id>http://yearr107.top/2023/04/24/Python-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</id>
-    <published>2023-04-24T01:38:42.000Z</published>
-    <updated>2023-07-07T06:55:05.551Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;ini&quot;&gt;&lt;a href=&quot;#ini&quot; class=&quot;headerlink&quot; title=&quot;ini&quot;&gt;&lt;/a&gt;ini&lt;/h2&gt;&lt;figure class=&quot;highlight ini&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
-        
-      
-    
-    
-    
-    
-    <category term="C++" scheme="http://yearr107.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EMQX MQTT Server 搭建</title>
-    <link href="http://yearr107.top/2023/04/24/EMQX-MQTT-Server-%E6%90%AD%E5%BB%BA/"/>
-    <id>http://yearr107.top/2023/04/24/EMQX-MQTT-Server-%E6%90%AD%E5%BB%BA/</id>
-    <published>2023-04-23T20:25:27.000Z</published>
-    <updated>2023-07-07T06:55:05.547Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;配置-EMQX-APT-源。&quot;&gt;&lt;a href=&quot;#配置-EMQX-APT-源。&quot; class=&quot;headerlink&quot; title=&quot;配置 EMQX APT 源。&quot;&gt;&lt;/a&gt;配置 EMQX APT 源。&lt;/h2&gt;&lt;figure class=&quot;highlight</summary>
-        
-      
-    
-    
-    
-    
-    <category term="C++" scheme="http://yearr107.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python 字符串格式化</title>
-    <link href="http://yearr107.top/2023/04/23/Python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
-    <id>http://yearr107.top/2023/04/23/Python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96/</id>
-    <published>2023-04-23T15:03:11.000Z</published>
-    <updated>2023-07-07T06:55:05.551Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;%&quot;&gt;&lt;/a&gt;%&lt;/h2&gt;&lt;h3 id=&quot;类型&quot;&gt;&lt;a href=&quot;#类型&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="C++" scheme="http://yearr107.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python 异常处理</title>
-    <link href="http://yearr107.top/2023/04/23/Python-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
-    <id>http://yearr107.top/2023/04/23/Python-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</id>
-    <published>2023-04-23T14:59:53.000Z</published>
-    <updated>2023-07-07T06:55:05.551Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;figure class=&quot;highlight py&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    
-    <category term="C++" scheme="http://yearr107.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQLAlchemy 增删改查</title>
-    <link href="http://yearr107.top/2023/04/23/SQLAlchemy-%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/"/>
-    <id>http://yearr107.top/2023/04/23/SQLAlchemy-%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/</id>
-    <published>2023-04-23T08:22:34.000Z</published>
-    <updated>2023-07-07T06:55:05.555Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;SQLAlchemy是一个Python的ORM（对象关系映射）框架，可以轻松地连接到各种数据库，并提供了方便的API来进行增删改查等常见操作。&lt;/p&gt;
-&lt;h2 id=&quot;增加数据&quot;&gt;&lt;a href=&quot;#增加数据&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="C++" scheme="http://yearr107.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python requirments.txt</title>
-    <link href="http://yearr107.top/2023/04/22/Python-requirments-txt/"/>
-    <id>http://yearr107.top/2023/04/22/Python-requirments-txt/</id>
-    <published>2023-04-22T08:30:51.000Z</published>
-    <updated>2023-07-07T06:55:05.551Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;生成-requirments&quot;&gt;&lt;a href=&quot;#生成-requirments&quot; class=&quot;headerlink&quot; title=&quot;生成 requirments&quot;&gt;&lt;/a&gt;生成 requirments&lt;/h2&gt;&lt;figure class=&quot;highlight</summary>
-        
-      
-    
-    
-    
-    
-    <category term="C++" scheme="http://yearr107.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>const、typeof和define</title>
-    <link href="http://yearr107.top/2023/04/18/const%E3%80%81typeof%E5%92%8Cdefine/"/>
-    <id>http://yearr107.top/2023/04/18/const%E3%80%81typeof%E5%92%8Cdefine/</id>
-    <published>2023-04-18T08:18:51.000Z</published>
-    <updated>2023-07-07T06:55:05.555Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>WSL</title>
-    <link href="http://yearr107.top/2023/04/18/WSL/"/>
-    <id>http://yearr107.top/2023/04/18/WSL/</id>
-    <published>2023-04-18T08:01:24.000Z</published>
-    <updated>2023-07-07T06:55:05.555Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ASCII 表</title>
-    <link href="http://yearr107.top/2023/04/18/ASCII-%E8%A1%A8/"/>
-    <id>http://yearr107.top/2023/04/18/ASCII-%E8%A1%A8/</id>
-    <published>2023-04-18T07:59:27.000Z</published>
-    <updated>2023-07-07T06:55:05.543Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;ASCII-表&quot;&gt;&lt;a href=&quot;#ASCII-表&quot; class=&quot;headerlink&quot; title=&quot;ASCII 表&quot;&gt;&lt;/a&gt;ASCII</summary>
-        
-      
-    
-    
-    
-    
-    <category term="C++" scheme="http://yearr107.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Dart 包管理工具</title>
-    <link href="http://yearr107.top/2023/04/18/Dart-%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
-    <id>http://yearr107.top/2023/04/18/Dart-%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</id>
-    <published>2023-04-18T07:52:37.000Z</published>
-    <updated>2023-07-07T06:55:05.547Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;pub 是 Dart 语言中的包管理器，用于管理Dart库和依赖项。以下是一些常用的 pub</summary>
-        
-      
-    
-    
-    
-    
-    <category term="C++" scheme="http://yearr107.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++ typeof</title>
-    <link href="http://yearr107.top/2023/04/18/C-typeof/"/>
-    <id>http://yearr107.top/2023/04/18/C-typeof/</id>
-    <published>2023-04-18T05:37:43.000Z</published>
-    <updated>2023-07-07T06:55:05.543Z</updated>
-    
-    
-    
-    
     
   </entry>
   
